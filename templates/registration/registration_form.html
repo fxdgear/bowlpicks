@@ -1,0 +1,20 @@
+{% extends "registration/base_registration.html" %}
+
+
+{% block title %}Register for an account{% endblock %}
+{% block body_class %}{{ block.super }} registration_form{% endblock %}
+
+
+{% block content_title %}
+  <h2>Register for an account</h2>
+{% endblock %}
+
+
+{% block content %}
+   <div class="hero-unit">
+    <form action="." method="post">{% csrf_token %}
+      {{ form.as_p }}
+      <p class="submit"><button class="btn primary" type="submit">Submit</button></p>
+    </form>
+  </div>
+{% endblock %}
