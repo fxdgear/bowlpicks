@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block subtitle %}
+    Bowlpicks
+{% endblock subtitle %}
+
+{% block extended_css %}
+{% endblock extended_css %}
+
+{% block content %}
+  <div class="row">
+    <div class="span12">
+      <h2>Today's Games</h2>
+      <hr/>
+      <div class="row">
+        <div class="span12">
+        {% if games %}
+          {% for game in games %}
+            <div class="game-title">
+              <h3>{{ game.name }} <small>{{ game.date|date:"g:i a" }} {{ game.get_timezome_display }} on {{ game.channel }}</small></h3>
+            </div>
+            <div class="row">
+              <div class="game-detail">
+                <div class="span" id="home-team">
+                  <p><small>({{ game.home_team.rank }})</small> <strong>{{ game.home_team.school }}</strong> ({{ game.home_team.record }})</br>
+                  <small>{{ game.home_team.school.conference }}</small></p>
+                  <p>{% if game.winner_home %}&#x2605; {% endif %}<strong>{{ game.home_picks.count }}</strong> Picks</p>
+                </div>
+                <div class="span">
+                  <h3>VS</h3>
+                </div>
+                <div class="span" id="away-team">
+                  <p><small>({{ game.away_team.rank }})</small> <strong>{{ game.away_team.school }}</strong> ({{ game.away_team.record }})</br>
+                  <small>{{ game.away_team.school.conference }}</small></p>
+                  <p>{% if game.winner_away %}&#x2605; {% endif %}<strong>{{ game.away_picks.count }}</strong> Picks</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+        <h2>No games today! :(</h2>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="span">
+      <h3>Leaderboard</h3>
+      <ol>
+        <li>Nick Lang <strong>(30)</strong></li>
+        <li>Steve Lang <strong>(29)</strong></li>
+      </ol>
+    </div>
+  </div>
+  </div>
+{% endblock content %}

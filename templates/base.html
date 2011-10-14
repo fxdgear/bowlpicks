@@ -25,6 +25,7 @@
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
   {% block extended_css %}{% endblock extended_css %}
   <!-- end CSS-->
   {% endblock css %}
@@ -43,26 +44,28 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <h3><a href="{% url homepage %}">Bowlpicks</a></h3>
+          <h3><a href="{% url homepage %}">NickLang</a></h3>
           <ul>
-            <li class="active"><a href="{% url homepage %}">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Link</a></li>
+            {% block nav %}
+              <li class="active"><a href="{% url homepage %}">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Blog</a></li>
+            {% endblock nav %}
           </ul>
           <ul class="nav secondary-nav">
             {% if user.is_authenticated %}
               <li class="menu">
                 <a href="#" class="menu">{{ user.first_name }} {{ user.last_name }}</a>
                 <ul class="menu-dropdown">
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Awesome Gym</a></li>
+                  <li><a href="">Profile</a></li>
+                  <li><a href="">New Post</a></li>
+                  <li><a href="">Add New Race</a></li>
                   <li class="divider"></li>
                   <li><a href="{% url auth_logout %}">Log out</a></li>
                 </ul>
               </li>
             {% else %}
-              <li><a href="{% url registration_register %}">Register</a></li>
               <li><a href="{% url auth_login %}">Log in</a></li>
             {% endif %}
           </ul>
@@ -71,21 +74,38 @@
     </div> <!-- /topbar -->
   </div> <!-- topbar-wrapper -->
 
-    <div class="container">
-      {% block content %}{% endblock content %}
-      <footer>
-        {% block footer %}
-          <p>&copy; Lab305 LLC 2011</p>
-        {% endblock footer %}
-      </footer>
+    <div class="container bowlpick-container">
+
+      <div class="content">
+      {% block header %}
+        <div class="page-header">
+          <h1>Bowl Picker</h1>
+        </div>
+      {% endblock header %}
+      {% block content %}
+        <div class="row">
+          <div class="span10">
+            <h2>Main content</h2>
+          </div>
+          <div class="span4">
+            <h3>Secondary content</h3>
+          </div>
+        </div>
+      </div>
+      {% endblock content %}
+
+      {% block footer %}
+        <footer>
+          <p>&copy; Company 2011</p>
+        </footer>
+      {% endblock footer %}
 
     </div> <!-- /container -->
-
   {% block js %}
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="{{ STATIC_URL}}js/libs/jquery-1.6.2.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 

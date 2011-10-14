@@ -13,3 +13,11 @@ class Profile(models.Model):
 
     def __unicode__(self):
         return u"%s" % self.full_name
+
+
+class Player(models.Model):
+    profile = models.ForeignKey(Profile)
+    name = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return u"%s" % self.name
