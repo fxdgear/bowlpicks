@@ -1,6 +1,8 @@
 from django.db import models
 import datetime
 
+from bowlpicks.profiles.models import Player
+
 
 class Season(models.Model):
     year_start = models.CharField(max_length=10)
@@ -9,6 +11,14 @@ class Season(models.Model):
 
     def __unicode__(self):
         return u"%s-%s" % (self.year_start, self.year_end)
+
+    def leaders(self):
+        players = sorted([(x.points, x) for x in Player.objects.all()])
+        players.reverse()
+        return players[:10]
+
+    def get_picks(self):
+        return Pick.objects.filter(game__season=self)
 
 
 class Conference(models.Model):
@@ -61,6 +71,11 @@ class GameManger(models.Manager):
         return self.all()
         #return self.filter(date=datetime.datetime.today()).order_by('-date')
 
+    def tomorrow(self, *args, **kwargs):
+        return self.all()
+        #tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
+        #return self.filter(date=datetime.datetime.tomorrow()).order_by('-date')
+
 
 class Game(models.Model):
     date = models.DateTimeField()
@@ -79,18 +94,18 @@ class Game(models.Model):
         return u"(%s) %s" % (self.season, self.name)
 
     def home_picks(self):
-        return self.pick_set.filter(winnner=self.home_team)
+        return self.pick_set.filter(winner=self.home_team)
 
     def away_picks(self):
         return self.pick_set.filter(winner=self.away_team)
 
     @property
     def winner_home(self):
-        return self.home_picks > self.away_picks
+        return self.home_picks().count() > self.away_picks().count()
 
     @property
     def winner_away(self):
-        return self.away_picks > self.home_picks
+        return self.away_picks().count() > self.home_picks().count()
 
     @property
     def winner(self):
@@ -98,6 +113,12 @@ class Game(models.Model):
             return self.home_team
         else:
             return self.away_team
+
+
+class PickManager(models.Manager):
+    def curent_season(self):
+        season = Season.objects.filter(current=True)[0]
+        return self.filter(game__season=season)
 
 
 class Pick(models.Model):
@@ -110,5 +131,11 @@ class Pick(models.Model):
 
     is_tie_breaker = models.BooleanField(default=False)
 
+    objects = PickManager()
+
     def __unicode__(self):
         return u"%s - %s" % (self.player, self.winner)
+
+    @property
+    def correct(self):
+        return self.winner == self.game.winner

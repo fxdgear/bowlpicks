@@ -44,13 +44,11 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <h3><a href="{% url homepage %}">NickLang</a></h3>
+          <h3><a href="{% url homepage %}">BowlPicker</a></h3>
           <ul>
             {% block nav %}
               <li class="active"><a href="{% url homepage %}">Home</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Blog</a></li>
+              <li><a href="{% url pick_list %}">Pick List</a></li>
             {% endblock nav %}
           </ul>
           <ul class="nav secondary-nav">
@@ -59,8 +57,6 @@
                 <a href="#" class="menu">{{ user.first_name }} {{ user.last_name }}</a>
                 <ul class="menu-dropdown">
                   <li><a href="">Profile</a></li>
-                  <li><a href="">New Post</a></li>
-                  <li><a href="">Add New Race</a></li>
                   <li class="divider"></li>
                   <li><a href="{% url auth_logout %}">Log out</a></li>
                 </ul>
@@ -79,7 +75,7 @@
       <div class="content">
       {% block header %}
         <div class="page-header">
-          <h1>Bowl Picker</h1>
+          <h1>{{ season }} Bowl Picks</h1>
         </div>
       {% endblock header %}
       {% block content %}

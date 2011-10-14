@@ -21,3 +21,15 @@ class Player(models.Model):
 
     def __unicode__(self):
         return u"%s" % self.name
+
+    @property
+    def points(self):
+        points = 0
+        for p in self.pick_set.curent_season():
+            if p.correct:
+                points += 1
+        return points
+
+    @property
+    def active(self):
+        return self.pick_set.curent_season().count()

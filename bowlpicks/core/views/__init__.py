@@ -10,5 +10,7 @@ class HomePage(TemplateView):
         # filter by current season, and grab the first one.
         # must make sure there is only ever one season marked as current.
         season = Season.objects.filter(current=True)[0]
-        context['games'] = season.game_set.today()
+        context['season'] = season
+        context['todays_games'] = season.game_set.today()
+        context['tomorrows_games'] = season.game_set.tomorrow()
         return context

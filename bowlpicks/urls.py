@@ -10,4 +10,5 @@ urlpatterns = patterns('',
     url(r'^$', HomePage.as_view(), {}, 'homepage'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^picks/', include('bowlpicks.core.urls.picks')),
 )
