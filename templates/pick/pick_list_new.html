@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{%block extended_js %}
+  <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+  <script type="text/javascript">
+    $(".circle").tooltip();
+  </script>
+{% endblock extended_js %}
+
+{% block extended_css %}
+  <style>
+    .pick-list {
+      margin-top:40px;
+      margin-left:10px;
+    }
+
+    article {
+        height: 45px;
+    }
+    article>* {
+        float: left;
+        height: 30px;
+    }
+    article header{
+        width:175px;
+        margin-right:20px;
+    }
+    footer {
+        margin-top:-10px;
+        margin-left:20px;
+    }
+
+    .win, .lose {
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .circle {
+          display: block;
+          width: 11px;
+          height: 11px;
+          -moz-border-radius: 11px;
+          -webkit-border-radius: 11px;
+          border: 1px solid #333;
+          margin-left: 3px;
+          margin-top:10px;
+          margin-right:3px;
+        }
+
+    .win {
+      background: #333;
+    }
+
+    .lose {
+      background: #fff;
+    }
+
+    .tooltip {
+        display:none;
+        background:transparent url(http://flowplayer.org/tools/img/tooltip/black_arrow.png);
+        font-size:12px;
+        height:70px;
+        width:160px;
+        padding:25px;
+        color:#fff;
+    }
+
+  </style>
+{% endblock extended_css %}
+
+{% block content %}
+  <div class="row pick-list">
+    {% for player, picks in players %}
+      <article>
+        <header><h4>{{ player }}</h4></header>
+        {% for pick in picks %}
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
+
+          <div class="tooltip" id="game-{{ pick.game.pk }}">
+              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
+          </div>
+
+        {% endfor %}
+        {% for pick in picks %}
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
+
+          <div class="tooltip" id="game-{{ pick.game.pk }}">
+              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
+          </div>
+
+        {% endfor %}
+        {% for pick in picks %}
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
+
+          <div class="tooltip" id="game-{{ pick.game.pk }}">
+              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
+          </div>
+
+        {% endfor %}
+        {% for pick in picks %}
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
+
+          <div class="tooltip" id="game-{{ pick.game.pk }}">
+              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
+          </div>
+
+        {% endfor %}
+        {% for pick in picks %}
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
+
+          <div class="tooltip" id="game-{{ pick.game.pk }}">
+              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
+          </div>
+
+        {% endfor %}
+        {% for pick in picks %}
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
+
+          <div class="tooltip" id="game-{{ pick.game.pk }}">
+              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
+          </div>
+
+        {% endfor %}
+        {% for pick in picks %}
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
+
+          <div class="tooltip" id="game-{{ pick.game.pk }}">
+              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
+          </div>
+
+        {% endfor %}
+
+        <footer><p><strong>{{ player.points }}</strong>/{{ player.wrong }}</p></footer>
+      </article>
+    {% endfor %}
+  </div>
+{% endblock content %}
