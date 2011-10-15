@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block subtitle %}
+    {{ profile }} Profile
+{% endblock subtitle %}
+
+{% block header %}
+  <div class="page-header">
+    <h1>{{ profile.full_name }}</h1>
+  </div>
+{% endblock header %}
+
+{% block content %}
+  <div class="row">
+    <div class="span6">
+      <h3>My Players</h3>
+      <ul>
+        {% for player in profile.player_set.all %}
+          <li><a href="{% url pick_detail player.pk %}">{{ player }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+    </div class="span4 offset1">
+
+    </div>
+{% endblock content %}

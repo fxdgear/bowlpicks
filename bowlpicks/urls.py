@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^picks/', include('bowlpicks.core.urls.picks')),
+    url(r'^profiles/', include('bowlpicks.profiles.urls')),
 )

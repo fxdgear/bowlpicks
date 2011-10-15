@@ -23,3 +23,27 @@ def pick_list(request, *args, **kwargs):
         'season': season,
         'players': players
     }, context_instance=RequestContext(request))
+
+
+def pick_detail(request, *args, **kwargs):
+    template_name = kwargs.pop('template', 'pick/pick_detail.html')
+
+    player_id = kwargs.pop('pk')
+    player = Player.objects.get(pk=player_id)
+    season = request.GET.get('season', None)
+    if not season:
+        picks = player.pick_set.curent_season()
+        try:
+            season = picks[0].game.season
+        except:
+            pass
+    else:
+        start, end = season.split("-")
+        picks = player.pick_set.filter(game__season__year_start=start,
+                                       game__season__year_end=end)
+
+    return render_to_response(template_name, {
+        'player': player,
+        'picks': picks,
+        'season': season
+    }, context_instance=RequestContext(request))

@@ -1,0 +1,32 @@
+{% extends "pick/pick_base.html" %}
+
+{% block subtitle %}
+    Picks for {{ player }}
+{% endblock subtitle %}
+
+{% block header %}
+    <div class="page-header">
+      <h1>Picks for {{ player }} <small>{{ season }}</small></h1>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <div class="row">
+        <div class="span6">
+            {% for pick in picks %}
+                <p>{% if pick.winner == pick.game.home_team %}
+                      <strong>{{ pick.game.home_team.school.abbr}}</strong>
+                    {% else %}
+                      {{ pick.game.home_team.school.abbr}}
+                    {% endif %}
+                    vs.
+                    {% if pick.winner == pick.game.away_team %}
+                      <strong>{{ pick.game.away_team.school.abbr}}</strong>
+                    {% else %}
+                      {{ pick.game.away_team.school.abbr}}
+                    {% endif %}
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

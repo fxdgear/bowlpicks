@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block subtitle %}
+    {{ profile }} Profile
+{% endblock subtitle %}
+
+{% block header %}
+  <div class="page-header">
+    <h2>My Picks</h2>
+  </div>
+{% endblock header %}
+
+{% block content %}
+  <div class="row">
+    {% for player in profile.player_set.all %}
+       <div class="span">
+          <h3>{{ player }}</h3>
+          {% for pick in player.pick_set.curent_season %}
+            <p>
+              {% if pick.winner == pick.game.home_team %}
+                <strong>{{ pick.game.home_team.school.abbr}}</strong>
+              {% else %}
+                {{ pick.game.home_team.school.abbr}}
+              {% endif %}
+              vs.
+              {% if pick.winner == pick.game.away_team %}
+                <strong>{{ pick.game.away_team.school.abbr}}</strong>
+              {% else %}
+                {{ pick.game.away_team.school.abbr}}
+              {% endif %}
+            </p>
+          {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+{% endblock content %}
