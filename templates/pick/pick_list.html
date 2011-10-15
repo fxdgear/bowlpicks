@@ -5,8 +5,46 @@
     <script src="{{ STATIC_URL}}js/libs/jquery-1.6.2.min.js"></script>
     <script src="{{ STATIC_URL}}js/jquery.tablesorter.min.js"></script>
     <style>
+
+        #sortable{
+        }
+
+        thead {
+            background-color: white;
+            color: black;
+            text-indent: 14px;
+            text-align: center;
+        }
+
+        thead tr th {
+          text-align:center;
+        }
+
         .container {
             margin-left:20px;
+        }
+
+         #sortable tbody tr td.correct {
+          color:#64D864;
+          font-weight:bold;
+
+        }
+
+         #sortable tbody tr td.incorrect {
+          color:#FF6347;
+          font-weight:bold;
+          text-decoration:line-through;
+        }
+
+        .winner {
+          color:#64D864;
+          font-weight:bold;
+        }
+
+        .loser {
+          color:#FF6347;
+          font-weight:bold;
+          text-decoration:line-through;
         }
 
     </style>
@@ -17,12 +55,18 @@
     <div class="container">
       <h1>{{ season }} Bowl Picks</h1>
 
-      <table class="zebra-striped" id="sortable">
+      <table id="sortable">
         <thead>
           <tr>
             <th>Player</th>
             {% for game in games %}
-              <th>{{ game.name }}<br>{{ game.home_team.school.abbr }} vs {{ game.away_team.school.abbr }}</th>
+              <th>{{ game.name }}<br/>
+              <span class="{% ifequal game.winner game.home_team %}winner{% endifequal %}{% ifequal game.winner game.away_team %}loser{% endifequal %}">
+                {{ game.home_team.school.abbr }}
+              </span> vs
+              <span class="{% ifequal game.winner game.away_team %}winner{% endifequal %}{% ifequal game.winner game.home_team %}loser{% endifequal %}">
+                {{ game.away_team.school.abbr }}
+              </span></th>
             {% endfor %}
           </tr>
         </thead>
@@ -31,7 +75,7 @@
             <tr>
               <td>({{ player.points }}) {{ player }} </td>
                 {% for pick in picks %}
-                  <td>{{ pick.winner.school.abbr }}</td>
+                  <td class="{% if pick.correct %}correct{% else %}incorrect{% endif %}">{{ pick.winner.school.abbr }}</td>
                 {% endfor %}
             </tr>
           {% endfor %}
