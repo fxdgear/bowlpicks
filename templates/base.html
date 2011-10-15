@@ -54,9 +54,9 @@
           <ul class="nav secondary-nav">
             {% if user.is_authenticated %}
               <li class="menu">
-                <a href="#" class="menu">{{ user.first_name }} {{ user.last_name }}</a>
+                <a href="#" class="menu">{{ user.get_profile }}</a>
                 <ul class="menu-dropdown">
-                  <li><a href="{% url profile_detail user.get_profile.pk %}">Profile</a></li>
+                  <li><a href="{% url bowlpicks_profile_detail user.get_profile.pk %}">Profile</a></li>
                   <li><a href="{% url profile_picks user.get_profile.pk %}">My Picks</a></li>
                   <li class="divider"></li>
                   <li><a href="{% url auth_logout %}">Log out</a></li>
@@ -64,6 +64,7 @@
               </li>
             {% else %}
               <li><a href="{% url auth_login %}">Log in</a></li>
+              <li><a href="{% url registration_register %}">Register</a></li>
             {% endif %}
           </ul>
         </div>
