@@ -2,8 +2,8 @@
 *.pyc
 *.egg-info
 .idea/
-/project_name/media/*
-/project_name/static/*
-/project_name/settings/local.py
+/bowlpicks/media/*
+/bowlpicks/static/*
+/bowlpicks/settings/local.py
 logfile
 
