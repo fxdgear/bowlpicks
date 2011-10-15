@@ -57,7 +57,7 @@
                 <a href="#" class="menu">{{ user.first_name }} {{ user.last_name }}</a>
                 <ul class="menu-dropdown">
                   <li><a href="{% url profile_detail user.get_profile.pk %}">Profile</a></li>
-                  <li><a href="#">My Picks</a></li>
+                  <li><a href="{% url profile_picks user.get_profile.pk %}">My Picks</a></li>
                   <li class="divider"></li>
                   <li><a href="{% url auth_logout %}">Log out</a></li>
                 </ul>

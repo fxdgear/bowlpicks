@@ -9,5 +9,5 @@ urlpatterns = patterns('',
                 model=Profile), {}, 'profile_detail'),
     url(r'^(?P<pk>\d+)/picks$', DetailView.as_view(
                 template_name="profiles/profile_picks.html",
-                model=Profile), {}, 'profile_detail'),
+                model=Profile), {}, 'profile_picks'),
 )
