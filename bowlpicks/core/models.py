@@ -93,6 +93,10 @@ class Game(models.Model):
     def __unicode__(self):
         return u"(%s) %s" % (self.season, self.name)
 
+    @property
+    def short_name(self):
+        return u"%s vs %s" % (self.home_team.school.abbr, self.away_team.school.abbr)
+
     def home_picks(self):
         return self.pick_set.filter(winner=self.home_team)
 

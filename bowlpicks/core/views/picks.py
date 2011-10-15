@@ -7,7 +7,7 @@ from bowlpicks.profiles.models import Player
 
 
 def pick_list(request, *args, **kwargs):
-    template_name = kwargs.pop('template', "pick/pick_list.html")
+    template_name = kwargs.pop('template', "pick/pick_list_new.html")
     season = Season.objects.filter(current=True)[0]
     games = season.game_set.all().order_by('date')
     player_list = [p for p in Player.objects.all() if p.active]

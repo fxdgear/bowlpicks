@@ -31,5 +31,13 @@ class Player(models.Model):
         return points
 
     @property
+    def wrong(self):
+        count = 0
+        for p in self.pick_set.curent_season():
+            if not p.correct:
+                count += 1
+        return count
+
+    @property
     def active(self):
         return self.pick_set.curent_season().count()
