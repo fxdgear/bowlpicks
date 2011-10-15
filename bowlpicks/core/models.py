@@ -88,6 +88,8 @@ class Game(models.Model):
     home_team = models.ForeignKey(Team, related_name="home_team")
     home_score = models.IntegerField(blank=True, null=True)
 
+    require_tie_breaker = models.BooleanField(default=False)
+
     objects = GameManger()
 
     def __unicode__(self):
@@ -132,8 +134,6 @@ class Pick(models.Model):
     winner = models.ForeignKey(Team)
     home_score = models.IntegerField(blank=True, null=True)
     away_score = models.IntegerField(blank=True, null=True)
-
-    is_tie_breaker = models.BooleanField(default=False)
 
     objects = PickManager()
 

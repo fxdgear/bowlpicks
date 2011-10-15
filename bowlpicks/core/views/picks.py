@@ -1,9 +1,21 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext  #, loader, Context
 
-from django.views.generic.list import ListView
+from django.views.generic.edit import ProcessFormView
+from django.views.generic.base import View
 from bowlpicks.core.models import Season
 from bowlpicks.profiles.models import Player
+from bowlpicks.core.forms import PickForm, PlayerForm
+
+
+def create_pick(request, *args, **kwargs):
+    template_name = "pick/pick_create.html"
+
+    players = request.user.get_profile().player_set.all()
+    form = PlayerForm(players=players)
+    return render_to_response(template_name, {
+        'form': form
+    }, context_instance=RequestContext(request))
 
 
 def pick_list(request, *args, **kwargs):

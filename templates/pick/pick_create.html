@@ -1,0 +1,34 @@
+{% extends "pick/pick_base.html" %}
+
+{% block subtitle %}
+    Choose a player
+{% endblock subtitle %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div class="hero-unit">
+    <form method="post", action=".">
+      <fieldset>
+      <legend>Choose a player</legend>
+        <div class="clearfix">
+          <label for="id_players">Available Players: </label>
+          <div class="input">
+            <select name="players" id="id_players">
+              {% for value, choice in form.fields.players.choices %}
+                <option value="{{ value }}">{{ choice }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <input type="submit" class="btn" value="I choose you">
+        </div>
+      <fieldset>
+    </form>
+</div>
+
+{% endblock content %}
+
