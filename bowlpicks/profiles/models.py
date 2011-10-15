@@ -1,9 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import User
+
+from idios.models import ProfileBase
 
 
-class Profile(models.Model):
-    user = models.ForeignKey(User)
+class Profile(ProfileBase):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
 
@@ -12,7 +12,10 @@ class Profile(models.Model):
         return u"%s %s" % (self.first_name, self.last_name)
 
     def __unicode__(self):
-        return u"%s" % self.full_name
+        if self.first_name or self.last_name:
+            return u"%s" % self.full_name
+        else:
+            return self.user.username
 
 
 class Player(models.Model):

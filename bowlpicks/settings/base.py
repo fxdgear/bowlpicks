@@ -129,6 +129,7 @@ DJANGO_APPS = [
 THIRDPARTY_APPS = [
     'registration',
     'south',
+    'idios',
 ]
 
 PROJECT_APPS = [
@@ -141,7 +142,13 @@ INSTALLED_APPS = DJANGO_APPS + THIRDPARTY_APPS + PROJECT_APPS
 # DJANGO REGISTRATION
 ACCOUNT_ACTIVATION_DAYS = 7
 
+ABSOLUTE_URL_OVERRIDES = {
+    "auth.user": lambda o: "/profiles/profile/%s/" % o.username,
+}
+
 AUTH_PROFILE_MODULE = "profiles.Profile"
+
+LOGIN_REDIRECT_URL = "/"
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
