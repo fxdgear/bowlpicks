@@ -1,0 +1,872 @@
+[
+    {
+        "pk": 1,
+        "model": "core.conference",
+        "fields": {
+            "name": "Southeastern Conference",
+            "abbr": "SEC"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "core.conference",
+        "fields": {
+            "name": "Pacific 12",
+            "abbr": "PAC 12"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "core.conference",
+        "fields": {
+            "name": "Mountain West Conference",
+            "abbr": "MWC"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "core.conference",
+        "fields": {
+            "name": "Independent",
+            "abbr": "Indp"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "core.conference",
+        "fields": {
+            "name": "Conference USA",
+            "abbr": "C-USA"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "core.conference",
+        "fields": {
+            "name": "Western Athletic Conference",
+            "abbr": "WAC"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "core.conference",
+        "fields": {
+            "name": " Mid-American Conference",
+            "abbr": "MAC"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "core.conference",
+        "fields": {
+            "name": "Gulf South Conference",
+            "abbr": "GSC"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "core.conference",
+        "fields": {
+            "name": "Big East Conference",
+            "abbr": "Big East"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "core.conference",
+        "fields": {
+            "name": "Sun Belt Conference",
+            "abbr": "SBC"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "core.conference",
+        "fields": {
+            "name": "Atlantic Coast Conference",
+            "abbr": "ACC"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "core.conference",
+        "fields": {
+            "name": "Big 10",
+            "abbr": "Big 10"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "core.conference",
+        "fields": {
+            "name": "Big 12",
+            "abbr": "Big 12"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "core.conference",
+        "fields": {
+            "name": "Atlantic 10",
+            "abbr": "A10"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "core.school",
+        "fields": {
+            "conference": 2,
+            "mascot": "Buffalos",
+            "name": "University of Colorado",
+            "abbr": "CU"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Gators",
+            "name": "University of Florida",
+            "abbr": "FLA"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "core.school",
+        "fields": {
+            "conference": 4,
+            "mascot": "Cougars",
+            "name": "Bringham Young University",
+            "abbr": "BYU"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "core.school",
+        "fields": {
+            "conference": 5,
+            "mascot": "Miners",
+            "name": "University of Texas, El Paso",
+            "abbr": "UTEP"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "core.school",
+        "fields": {
+            "conference": 6,
+            "mascot": "Bulldogs",
+            "name": "Fresno State University",
+            "abbr": "FSU"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "core.school",
+        "fields": {
+            "conference": 3,
+            "mascot": "Lobos",
+            "name": "New Mexico University",
+            "abbr": "UNM"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "core.school",
+        "fields": {
+            "conference": 7,
+            "mascot": "Huskies",
+            "name": "Northern Illinois",
+            "abbr": "NIU"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "core.school",
+        "fields": {
+            "conference": 8,
+            "mascot": "Trojans",
+            "name": "Troy University",
+            "abbr": "Troy"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "core.school",
+        "fields": {
+            "conference": 7,
+            "mascot": "Bobcats",
+            "name": "University of Ohio",
+            "abbr": "OU"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "core.school",
+        "fields": {
+            "conference": 9,
+            "mascot": "Cardinals",
+            "name": "Louisville University",
+            "abbr": "UL"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "core.school",
+        "fields": {
+            "conference": 5,
+            "mascot": "Eagles",
+            "name": "University of Southern Mississippi",
+            "abbr": "USM"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "core.school",
+        "fields": {
+            "conference": 3,
+            "mascot": "Utes",
+            "name": "University of Utah",
+            "abbr": "U"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "core.school",
+        "fields": {
+            "conference": 6,
+            "mascot": "Broncos",
+            "name": "Boise State University",
+            "abbr": "BSU"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "core.school",
+        "fields": {
+            "conference": 4,
+            "mascot": "Midshipmen",
+            "name": "Navy",
+            "abbr": "Navy"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "core.school",
+        "fields": {
+            "conference": 6,
+            "mascot": "Warriors",
+            "name": "University of Hawaii",
+            "abbr": "UH"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "core.school",
+        "fields": {
+            "conference": 8,
+            "mascot": "Aztecs",
+            "name": "San Diego State University",
+            "abbr": "SDSU"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "core.school",
+        "fields": {
+            "conference": 5,
+            "mascot": "Golden Hurricane",
+            "name": "Tulsa University",
+            "abbr": "TU"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "core.school",
+        "fields": {
+            "conference": 7,
+            "mascot": "Rockets",
+            "name": "University of Toledo",
+            "abbr": "UT"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "core.school",
+        "fields": {
+            "conference": 10,
+            "mascot": "Golden Panthers",
+            "name": "Florida International University",
+            "abbr": "FIU"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Yellow Jackets",
+            "name": "Georgia Tech University",
+            "abbr": "GT"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "core.school",
+        "fields": {
+            "conference": 3,
+            "mascot": "Falcons",
+            "name": "Air Force Football",
+            "abbr": "Air Force"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "core.school",
+        "fields": {
+            "conference": 9,
+            "mascot": "Mountaineers",
+            "name": "West Virginia University",
+            "abbr": "WVU"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Wolfpack",
+            "name": "North Carolina State University",
+            "abbr": "NCSU"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Hawkeyes",
+            "name": "University of Iowa",
+            "abbr": "UI"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "core.school",
+        "fields": {
+            "conference": 13,
+            "mascot": "Tigers",
+            "name": "University of Missouri",
+            "abbr": "Mizzou"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Terrapins",
+            "name": "University of Maryland",
+            "abbr": "UMB"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "core.school",
+        "fields": {
+            "conference": 5,
+            "mascot": "Pirates",
+            "name": "East Carolina University",
+            "abbr": "ECU"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Fighting Illini",
+            "name": "University of Illinonis",
+            "abbr": "UI"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "core.school",
+        "fields": {
+            "conference": 13,
+            "mascot": "Bears",
+            "name": "University of Baylor",
+            "abbr": "UB"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "core.school",
+        "fields": {
+            "conference": 13,
+            "mascot": "Cowboys",
+            "name": "Oklahoma State University",
+            "abbr": "OSU"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "core.school",
+        "fields": {
+            "conference": 2,
+            "mascot": "Wildcats",
+            "name": "University of Arizona",
+            "abbr": "U of A"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "core.school",
+        "fields": {
+            "conference": 4,
+            "mascot": "Black Knights",
+            "name": "U.S. Military Academy",
+            "abbr": "Army"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "core.school",
+        "fields": {
+            "conference": 5,
+            "mascot": "Mustangs",
+            "name": "South Methodist University",
+            "abbr": "SMU"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "core.school",
+        "fields": {
+            "conference": 13,
+            "mascot": "Wildcats",
+            "name": "Kansas State University",
+            "abbr": "K-State"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Orange",
+            "name": "Syracuse University",
+            "abbr": "'Cuse"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Tar Heels",
+            "name": "North Carolina University",
+            "abbr": "UNC"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Vols",
+            "name": "University of Tennessee",
+            "abbr": "UT"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Cornhuskers",
+            "name": "University of Nebraska",
+            "abbr": "NU"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "core.school",
+        "fields": {
+            "conference": 2,
+            "mascot": "Huskies",
+            "name": "University of Washington",
+            "abbr": "U-Dub"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "core.school",
+        "fields": {
+            "conference": 9,
+            "mascot": "Bulls",
+            "name": "University of South Florida",
+            "abbr": "USF"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Tigers",
+            "name": "Clemson University",
+            "abbr": "CU"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Hurricanes",
+            "name": "University of Miami",
+            "abbr": "The U"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "core.school",
+        "fields": {
+            "conference": 4,
+            "mascot": "Fighting Irish",
+            "name": "Notre Dame University",
+            "abbr": "ND"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "core.school",
+        "fields": {
+            "conference": 5,
+            "mascot": "Knights",
+            "name": "University Central Florida",
+            "abbr": "UCF"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Bulldogs",
+            "name": "University of Georgia",
+            "abbr": "UGA"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Seminoles",
+            "name": "Florida State University",
+            "abbr": "FSU"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Gamecocks",
+            "name": "University of South Carolina",
+            "abbr": "USC"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Wildcats",
+            "name": "Northwestern University",
+            "abbr": "NU"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "core.school",
+        "fields": {
+            "conference": 13,
+            "mascot": "Red Raiders",
+            "name": "Texas Tech University",
+            "abbr": "TTU"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Gators",
+            "name": "University of Florida",
+            "abbr": "UF"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Nittany Lions",
+            "name": "Pennsylvania State University",
+            "abbr": "Penn"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "core.school",
+        "fields": {
+            "conference": 5,
+            "mascot": "Spartans",
+            "name": "Michigan State University",
+            "abbr": "MSU"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Crimson Tide",
+            "name": "University of Alabama",
+            "abbr": "UA"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Wolverines",
+            "name": "University of Michigan",
+            "abbr": "UM"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Bulldogs",
+            "name": "Mississippi State University",
+            "abbr": "MSU"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Badgers",
+            "name": "University of Wisconsin",
+            "abbr": "UW"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "core.school",
+        "fields": {
+            "conference": 3,
+            "mascot": "Horned Frogs",
+            "name": "Texas Christian University",
+            "abbr": "TCU"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "core.school",
+        "fields": {
+            "conference": 9,
+            "mascot": "Huskies",
+            "name": "University of Connecticut",
+            "abbr": "UConn"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "core.school",
+        "fields": {
+            "conference": 13,
+            "mascot": "Sooners",
+            "name": "University of Oklahoma",
+            "abbr": "OU"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "core.school",
+        "fields": {
+            "conference": 2,
+            "mascot": "Cardinals",
+            "name": "Stanford University",
+            "abbr": "SU"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Hokies",
+            "name": "Virginia Polytechnic Institute and State University",
+            "abbr": "VT"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Razorbacks",
+            "name": "University of Arkansas",
+            "abbr": "UA"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "core.school",
+        "fields": {
+            "conference": 12,
+            "mascot": "Buckeyes",
+            "name": "Ohio State University",
+            "abbr": "OSU"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "core.school",
+        "fields": {
+            "conference": 10,
+            "mascot": "Blue Raiders",
+            "name": "Middle Tennessee State University",
+            "abbr": "MTSU"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "core.school",
+        "fields": {
+            "conference": 7,
+            "mascot": "Redhawks",
+            "name": "University of Miami, Ohio",
+            "abbr": "UM Ohio"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "core.school",
+        "fields": {
+            "conference": 13,
+            "mascot": "Aggies",
+            "name": "Texas A&M",
+            "abbr": "TAMU"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Tigers",
+            "name": "Louisiana State University",
+            "abbr": "LSU"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "core.school",
+        "fields": {
+            "conference": 9,
+            "mascot": "Panthers",
+            "name": "University of Pittsburg",
+            "abbr": "Pitt"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Wildcats",
+            "name": "University of Kentucky",
+            "abbr": "UK"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "core.school",
+        "fields": {
+            "conference": 11,
+            "mascot": "Eagles",
+            "name": "Boston College",
+            "abbr": "BC"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "core.school",
+        "fields": {
+            "conference": 3,
+            "mascot": "Raiders",
+            "name": "University of Nevada, Las Vegas",
+            "abbr": "UNLV"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "core.school",
+        "fields": {
+            "conference": 6,
+            "mascot": "Wolfpack",
+            "name": "University of Nevada, Reno",
+            "abbr": "UNR"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "core.school",
+        "fields": {
+            "conference": 1,
+            "mascot": "Tigers",
+            "name": "Auburn University",
+            "abbr": "AU"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "core.school",
+        "fields": {
+            "conference": 2,
+            "mascot": "Ducks",
+            "name": "University of Oregon",
+            "abbr": "UO"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "core.season",
+        "fields": {
+            "current": true,
+            "year_start": "2011",
+            "year_end": "2012"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "core.season",
+        "fields": {
+            "current": false,
+            "year_start": "2010",
+            "year_end": "2011"
+        }
+    }
+]
