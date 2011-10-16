@@ -10,7 +10,7 @@
 {% endblock nav %}
 
 {%block extended_js %}
-  <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery.tools.min.js"></script>
   <script type="text/javascript">
     $(".circle").tooltip();
   </script>
@@ -70,7 +70,7 @@
 
     .tooltip {
         display:none;
-        background:transparent url(http://flowplayer.org/tools/img/tooltip/black_arrow.png);
+        background:transparent url({{STATIC_URL}}img/black_arrow.png);
         font-size:12px;
         height:70px;
         width:160px;
@@ -90,7 +90,8 @@
           <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
 
           <div class="tooltip" id="game-{{ pick.game.pk }}">
-              <p><strong>{{ pick.game.short_name }}</strong></p>
+              <p><strong>{{ pick.game.name }}</strong></br>
+              <strong>{{ pick.game.short_name }}</strong></p>
               <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
           </div>
 
