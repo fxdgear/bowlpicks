@@ -1,5 +1,7 @@
 from django.contrib import admin
 from bowlpicks.core.models import Season, Conference, School, Team, Game, Pick
+from bowlpicks.core import listeners
+
 
 admin.site.register(Season)
 admin.site.register(Conference)

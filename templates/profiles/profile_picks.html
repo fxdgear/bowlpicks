@@ -1,12 +1,92 @@
 {% extends "base.html" %}
 
+{% block extended_css %}
+  <style>
+   .choice {
+      font-size:13px;
+    }
+
+    a.choice {
+      color:black;
+    }
+
+    a.choice:link {
+      color: black;
+      text-decoration: none;
+      cursor:hand;
+    }
+
+    a.choice:hover {
+      font-weight:bold;
+      text-decoration: none;
+      cursor:hand;
+    }
+
+    a.choice:visited {
+      color: black;
+      text-decoration: none;
+    }
+
+    a.choice.active {
+      color: black;
+      text-decoration: none;
+    }
+
+    a.selected {
+      font-weight:bold;
+      font-size:15px;
+      text-decoration:none;
+    }
+  </style>
+{% endblock extended_css %}
+
+{% block extended_js %}
+  <script>
+    var markSelected = function(selected, parent){
+      var selected = selected;
+      var children = $(parent).children();
+
+      if( selected == children[0]){
+        var unselected = children[1]
+      }else{
+        var unselected = children[0]
+      }
+
+      if ( !($(selected).hasClass('selected')) ){
+        $(selected).addClass('selected');
+      }
+
+      if ( $(unselected).hasClass('selected')) {
+        $(unselected).removeClass('selected');
+      }
+    };
+
+    var upDatePick = function(game_id, winner_id, player_id, selected){
+      var game_id = game_id;
+      var winner_id = winner_id;
+      var player_id = player_id;
+      var selected = selected;
+      var parent = $(selected).parent()
+
+      $.get('{% url pick_create %}',
+        {game: game_id, winner: winner_id, player: player_id},
+        function(data) {
+          markSelected(selected, parent);
+          });
+    };
+
+  </script>
+{% endblock extended_js %}
+
 {% block subtitle %}
-    {{ profile }} Profile
+    {{ profile }} picks
 {% endblock subtitle %}
 
 {% block header %}
   <div class="page-header">
     <h2>My Picks</h2>
+    <p>Click on a team name to make your selection.</br>
+    <small>Any questions contact <a href="mailto:nick@nicklang.com">Nick</a></small></p>
   </div>
 {% endblock header %}
 
@@ -17,17 +97,10 @@
           <h3>{{ player }}</h3>
           {% for pick in player.pick_set.curent_season %}
             <p>
-              {% if pick.winner == pick.game.home_team %}
-                <strong>{{ pick.game.home_team.school.abbr}}</strong>
-              {% else %}
-                {{ pick.game.home_team.school.abbr}}
-              {% endif %}
+              <a class="choice{% if pick.winner == pick.game.home_team %} selected{% endif %}"
+              onClick="upDatePick({{pick.game.pk}}, {{pick.game.home_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.home_team.school.abbr}}</a>
               vs.
-              {% if pick.winner == pick.game.away_team %}
-                <strong>{{ pick.game.away_team.school.abbr}}</strong>
-              {% else %}
-                {{ pick.game.away_team.school.abbr}}
-              {% endif %}
+              <a class="choice{% if pick.winner == pick.game.away_team %} selected{% endif %}" onClick="upDatePick({{pick.game.pk}}, {{pick.game.away_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.away_team.school.abbr}}</a>
             </p>
           {% endfor %}
       </div>

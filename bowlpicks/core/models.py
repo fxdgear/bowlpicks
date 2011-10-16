@@ -124,14 +124,14 @@ class Game(models.Model):
 class PickManager(models.Manager):
     def curent_season(self):
         season = Season.objects.filter(current=True)[0]
-        return self.filter(game__season=season)
+        return self.filter(game__season=season).order_by('game__date')
 
 
 class Pick(models.Model):
 
     player = models.ForeignKey("profiles.Player")
     game = models.ForeignKey(Game)
-    winner = models.ForeignKey(Team)
+    winner = models.ForeignKey(Team, blank=True, null=True)
     home_score = models.IntegerField(blank=True, null=True)
     away_score = models.IntegerField(blank=True, null=True)
 

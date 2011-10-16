@@ -34,9 +34,10 @@
         width:175px;
         margin-right:20px;
     }
-    footer {
-        margin-top:-10px;
-        margin-left:20px;
+
+    .score {
+      margin-top:10px;
+      margin-left:20px;
     }
 
     .win, .lose {
@@ -94,7 +95,7 @@
           </div>
 
         {% endfor %}
-        <footer><p><strong>{{ player.points }}</strong>/{{ player.wrong }}</p></footer>
+        <div class="score"><p><strong>{{ player.points }}</strong>/{{ player.wrong }}</p></div>
       </article>
     {% endfor %}
   </div>

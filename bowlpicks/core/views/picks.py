@@ -1,21 +1,36 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext  #, loader, Context
+from django.http import HttpResponse, HttpResponseForbidden
+from django.contrib.auth.decorators import login_required
 
 from django.views.generic.edit import ProcessFormView
 from django.views.generic.base import View
-from bowlpicks.core.models import Season
+
+from bowlpicks.core.models import Season, Game, Team, Pick
 from bowlpicks.profiles.models import Player
 from bowlpicks.core.forms import PickForm, PlayerForm
 
 
+@login_required
 def create_pick(request, *args, **kwargs):
-    template_name = "pick/pick_create.html"
+    profile = request.user.get_profile()
+    game_id = request.GET.get('game')
+    player_id = request.GET.get('player')
+    winner_id = request.GET.get('winner')
 
-    players = request.user.get_profile().player_set.all()
-    form = PlayerForm(players=players)
-    return render_to_response(template_name, {
-        'form': form
-    }, context_instance=RequestContext(request))
+    try:
+        player = profile.player_set.get(pk=player_id)
+    except:
+        return HttpResponseForbidden()
+
+    if request.is_ajax and request.method == "GET":
+        game = Game.objects.get(pk=game_id)
+        winner = Team.objects.get(pk=winner_id)
+
+        pick, created = Pick.objects.get_or_create(game=game, player=player)
+        pick.winner = winner
+        pick.save()
+        return HttpResponse(status=200)
 
 
 def pick_list(request, *args, **kwargs):
@@ -30,6 +45,8 @@ def pick_list(request, *args, **kwargs):
     for p in player_list:
         players.append((p, p.pick_set.curent_season().order_by('game__date')))
 
+    players = sorted(players, key=lambda player: player[0].points, reverse=True)
+
     return render_to_response(template_name, {
         'games': games,
         'season': season,
@@ -37,6 +54,7 @@ def pick_list(request, *args, **kwargs):
     }, context_instance=RequestContext(request))
 
 
+@login_required
 def pick_detail(request, *args, **kwargs):
     template_name = kwargs.pop('template', 'pick/pick_detail.html')
 
@@ -52,7 +70,7 @@ def pick_detail(request, *args, **kwargs):
     else:
         start, end = season.split("-")
         picks = player.pick_set.filter(game__season__year_start=start,
-                                       game__season__year_end=end)
+                                       game__season__year_end=end).order_by('game__date')
 
     return render_to_response(template_name, {
         'player': player,
