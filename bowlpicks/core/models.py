@@ -117,8 +117,10 @@ class Game(models.Model):
     def winner(self):
         if self.home_score > self.away_score:
             return self.home_team
-        else:
+        elif self.away_score > self.home_score:
             return self.away_team
+        else:
+            return None
 
 
 class PickManager(models.Manager):
@@ -142,4 +144,7 @@ class Pick(models.Model):
 
     @property
     def correct(self):
-        return self.winner == self.game.winner
+        if self.winner:
+            return self.winner == self.game.winner
+        else:
+            return None
