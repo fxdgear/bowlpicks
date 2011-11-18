@@ -68,13 +68,11 @@ TIMEZONES = (
 
 class GameManger(models.Manager):
     def today(self, *args, **kwargs):
-        return self.all()
-        #return self.filter(date=datetime.datetime.today()).order_by('-date')
+        return self.filter(date=datetime.datetime.today()).order_by('-date')
 
     def tomorrow(self, *args, **kwargs):
-        return self.all()
-        #tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
-        #return self.filter(date=datetime.datetime.tomorrow()).order_by('-date')
+        tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
+        return self.filter(date=tomorrow).order_by('-date')
 
 
 class Game(models.Model):
@@ -83,9 +81,9 @@ class Game(models.Model):
     season = models.ForeignKey(Season)
     name = models.CharField(max_length=100)
     channel = models.CharField(max_length=100)
-    away_team = models.ForeignKey(Team, related_name="away_team")
+    away_team = models.ForeignKey(Team, related_name="away_team", blank=True, null=True)
     away_score = models.IntegerField(blank=True, null=True)
-    home_team = models.ForeignKey(Team, related_name="home_team")
+    home_team = models.ForeignKey(Team, related_name="home_team", blank=True, null=True)
     home_score = models.IntegerField(blank=True, null=True)
 
     require_tie_breaker = models.BooleanField(default=False)
