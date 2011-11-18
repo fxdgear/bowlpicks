@@ -25,8 +25,11 @@ def create_pick(request, *args, **kwargs):
 
     if request.is_ajax and request.method == "GET":
         game = Game.objects.get(pk=game_id)
-        winner = Team.objects.get(pk=winner_id)
+        season = game.season
+        if season.is_froze:
+            return HttpResponseForbidden()
 
+        winner = Team.objects.get(pk=winner_id)
         pick, created = Pick.objects.get_or_create(game=game, player=player)
         pick.winner = winner
         pick.save()

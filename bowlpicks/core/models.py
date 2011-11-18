@@ -8,6 +8,7 @@ class Season(models.Model):
     year_start = models.CharField(max_length=10)
     year_end = models.CharField(max_length=10)
     current = models.BooleanField(default=False)
+    freeze_date = models.DateField(blank=True, null=True)
 
     def __unicode__(self):
         return u"%s-%s" % (self.year_start, self.year_end)
@@ -19,6 +20,10 @@ class Season(models.Model):
 
     def get_picks(self):
         return Pick.objects.filter(game__season=self)
+
+    @property
+    def is_froze(self):
+        return datetime.datetime.now() >= self.freeze_date
 
 
 class Conference(models.Model):
