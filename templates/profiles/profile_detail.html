@@ -22,6 +22,11 @@
 {% block header %}
   <div class="page-header">
     <h1>{{ profile.full_name }}</h1>
+     {% if season.is_froze %}
+      <h3>Picks are now frozen.</h3>
+    {% else %}
+      <h3>Picks will be frozen on {{ season.freeze_date }}</h3>
+    {% endif %}
   </div>
 {% endblock header %}
 

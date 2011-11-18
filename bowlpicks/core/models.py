@@ -4,11 +4,18 @@ import datetime
 from bowlpicks.profiles.models import Player
 
 
+class SeasonManager(models.Manager):
+    def current(self):
+        return self.filter(current=True)[0]
+
+
 class Season(models.Model):
     year_start = models.CharField(max_length=10)
     year_end = models.CharField(max_length=10)
     current = models.BooleanField(default=False)
     freeze_date = models.DateField(blank=True, null=True)
+
+    objects = SeasonManager()
 
     def __unicode__(self):
         return u"%s-%s" % (self.year_start, self.year_end)
@@ -23,7 +30,7 @@ class Season(models.Model):
 
     @property
     def is_froze(self):
-        return datetime.datetime.now() >= self.freeze_date
+        return datetime.date.today() >= self.freeze_date
 
 
 class Conference(models.Model):

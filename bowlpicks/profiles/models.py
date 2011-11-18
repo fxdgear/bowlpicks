@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import get_model
 
 from idios.models import ProfileBase
 
@@ -16,6 +17,10 @@ class Profile(ProfileBase):
             return u"%s" % self.full_name
         else:
             return self.user.username
+
+    def current_season(self):
+        model = get_model('core', 'Season')
+        return model.objects.current()
 
 
 class Player(models.Model):
