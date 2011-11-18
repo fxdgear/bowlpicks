@@ -1,872 +1,4947 @@
 [
     {
-        "pk": 1,
-        "model": "core.conference",
-        "fields": {
-            "name": "Southeastern Conference",
-            "abbr": "SEC"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "core.conference",
-        "fields": {
-            "name": "Pacific 12",
-            "abbr": "PAC 12"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "core.conference",
-        "fields": {
-            "name": "Mountain West Conference",
-            "abbr": "MWC"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "core.conference",
-        "fields": {
-            "name": "Independent",
-            "abbr": "Indp"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "core.conference",
-        "fields": {
-            "name": "Conference USA",
-            "abbr": "C-USA"
-        }
-    },
-    {
-        "pk": 6,
-        "model": "core.conference",
-        "fields": {
-            "name": "Western Athletic Conference",
-            "abbr": "WAC"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "core.conference",
-        "fields": {
-            "name": " Mid-American Conference",
-            "abbr": "MAC"
-        }
-    },
-    {
-        "pk": 8,
-        "model": "core.conference",
-        "fields": {
-            "name": "Gulf South Conference",
-            "abbr": "GSC"
-        }
-    },
-    {
-        "pk": 9,
-        "model": "core.conference",
-        "fields": {
-            "name": "Big East Conference",
-            "abbr": "Big East"
-        }
-    },
-    {
-        "pk": 10,
-        "model": "core.conference",
-        "fields": {
-            "name": "Sun Belt Conference",
-            "abbr": "SBC"
-        }
-    },
-    {
-        "pk": 11,
-        "model": "core.conference",
-        "fields": {
-            "name": "Atlantic Coast Conference",
-            "abbr": "ACC"
-        }
-    },
-    {
-        "pk": 12,
-        "model": "core.conference",
-        "fields": {
-            "name": "Big 10",
-            "abbr": "Big 10"
-        }
-    },
-    {
-        "pk": 13,
-        "model": "core.conference",
-        "fields": {
-            "name": "Big 12",
-            "abbr": "Big 12"
-        }
-    },
-    {
-        "pk": 14,
-        "model": "core.conference",
-        "fields": {
-            "name": "Atlantic 10",
-            "abbr": "A10"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "core.school",
-        "fields": {
-            "conference": 2,
-            "mascot": "Buffalos",
-            "name": "University of Colorado",
-            "abbr": "CU"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Gators",
-            "name": "University of Florida",
-            "abbr": "FLA"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "core.school",
-        "fields": {
-            "conference": 4,
-            "mascot": "Cougars",
-            "name": "Bringham Young University",
-            "abbr": "BYU"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "core.school",
-        "fields": {
-            "conference": 5,
-            "mascot": "Miners",
-            "name": "University of Texas, El Paso",
-            "abbr": "UTEP"
-        }
-    },
-    {
-        "pk": 6,
-        "model": "core.school",
-        "fields": {
-            "conference": 6,
-            "mascot": "Bulldogs",
-            "name": "Fresno State University",
-            "abbr": "FSU"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "core.school",
-        "fields": {
-            "conference": 3,
-            "mascot": "Lobos",
-            "name": "New Mexico University",
-            "abbr": "UNM"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "core.school",
-        "fields": {
-            "conference": 7,
-            "mascot": "Huskies",
-            "name": "Northern Illinois",
-            "abbr": "NIU"
-        }
-    },
-    {
-        "pk": 8,
-        "model": "core.school",
-        "fields": {
-            "conference": 8,
-            "mascot": "Trojans",
-            "name": "Troy University",
-            "abbr": "Troy"
-        }
-    },
-    {
-        "pk": 9,
-        "model": "core.school",
-        "fields": {
-            "conference": 7,
-            "mascot": "Bobcats",
-            "name": "University of Ohio",
-            "abbr": "OU"
-        }
-    },
-    {
-        "pk": 10,
-        "model": "core.school",
-        "fields": {
-            "conference": 9,
-            "mascot": "Cardinals",
-            "name": "Louisville University",
-            "abbr": "UL"
-        }
-    },
-    {
-        "pk": 11,
-        "model": "core.school",
-        "fields": {
-            "conference": 5,
-            "mascot": "Eagles",
-            "name": "University of Southern Mississippi",
-            "abbr": "USM"
-        }
-    },
-    {
-        "pk": 12,
-        "model": "core.school",
-        "fields": {
-            "conference": 3,
-            "mascot": "Utes",
-            "name": "University of Utah",
-            "abbr": "U"
-        }
-    },
-    {
-        "pk": 13,
-        "model": "core.school",
-        "fields": {
-            "conference": 6,
-            "mascot": "Broncos",
-            "name": "Boise State University",
-            "abbr": "BSU"
-        }
-    },
-    {
-        "pk": 15,
-        "model": "core.school",
-        "fields": {
-            "conference": 4,
-            "mascot": "Midshipmen",
-            "name": "Navy",
-            "abbr": "Navy"
-        }
-    },
-    {
-        "pk": 16,
-        "model": "core.school",
-        "fields": {
-            "conference": 6,
-            "mascot": "Warriors",
-            "name": "University of Hawaii",
-            "abbr": "UH"
-        }
-    },
-    {
-        "pk": 14,
-        "model": "core.school",
-        "fields": {
-            "conference": 8,
-            "mascot": "Aztecs",
-            "name": "San Diego State University",
-            "abbr": "SDSU"
-        }
-    },
-    {
-        "pk": 17,
-        "model": "core.school",
-        "fields": {
-            "conference": 5,
-            "mascot": "Golden Hurricane",
-            "name": "Tulsa University",
-            "abbr": "TU"
-        }
-    },
-    {
-        "pk": 18,
-        "model": "core.school",
-        "fields": {
-            "conference": 7,
-            "mascot": "Rockets",
-            "name": "University of Toledo",
-            "abbr": "UT"
-        }
-    },
-    {
-        "pk": 19,
-        "model": "core.school",
-        "fields": {
-            "conference": 10,
-            "mascot": "Golden Panthers",
-            "name": "Florida International University",
-            "abbr": "FIU"
-        }
-    },
-    {
-        "pk": 20,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Yellow Jackets",
-            "name": "Georgia Tech University",
-            "abbr": "GT"
-        }
-    },
-    {
-        "pk": 21,
-        "model": "core.school",
-        "fields": {
-            "conference": 3,
-            "mascot": "Falcons",
-            "name": "Air Force Football",
-            "abbr": "Air Force"
-        }
-    },
-    {
-        "pk": 22,
-        "model": "core.school",
-        "fields": {
-            "conference": 9,
-            "mascot": "Mountaineers",
-            "name": "West Virginia University",
-            "abbr": "WVU"
-        }
-    },
-    {
-        "pk": 23,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Wolfpack",
-            "name": "North Carolina State University",
-            "abbr": "NCSU"
-        }
-    },
-    {
-        "pk": 24,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Hawkeyes",
-            "name": "University of Iowa",
-            "abbr": "UI"
-        }
-    },
-    {
-        "pk": 25,
-        "model": "core.school",
-        "fields": {
-            "conference": 13,
-            "mascot": "Tigers",
-            "name": "University of Missouri",
-            "abbr": "Mizzou"
-        }
-    },
-    {
-        "pk": 26,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Terrapins",
-            "name": "University of Maryland",
-            "abbr": "UMB"
-        }
-    },
-    {
-        "pk": 27,
-        "model": "core.school",
-        "fields": {
-            "conference": 5,
-            "mascot": "Pirates",
-            "name": "East Carolina University",
-            "abbr": "ECU"
-        }
-    },
-    {
-        "pk": 28,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Fighting Illini",
-            "name": "University of Illinonis",
-            "abbr": "UI"
-        }
-    },
-    {
-        "pk": 29,
-        "model": "core.school",
-        "fields": {
-            "conference": 13,
-            "mascot": "Bears",
-            "name": "University of Baylor",
-            "abbr": "UB"
-        }
-    },
-    {
-        "pk": 30,
-        "model": "core.school",
-        "fields": {
-            "conference": 13,
-            "mascot": "Cowboys",
-            "name": "Oklahoma State University",
-            "abbr": "OSU"
-        }
-    },
-    {
-        "pk": 31,
-        "model": "core.school",
-        "fields": {
-            "conference": 2,
-            "mascot": "Wildcats",
-            "name": "University of Arizona",
-            "abbr": "U of A"
-        }
-    },
-    {
-        "pk": 32,
-        "model": "core.school",
-        "fields": {
-            "conference": 4,
-            "mascot": "Black Knights",
-            "name": "U.S. Military Academy",
-            "abbr": "Army"
-        }
-    },
-    {
-        "pk": 33,
-        "model": "core.school",
-        "fields": {
-            "conference": 5,
-            "mascot": "Mustangs",
-            "name": "South Methodist University",
-            "abbr": "SMU"
-        }
-    },
-    {
-        "pk": 34,
-        "model": "core.school",
-        "fields": {
-            "conference": 13,
-            "mascot": "Wildcats",
-            "name": "Kansas State University",
-            "abbr": "K-State"
-        }
-    },
-    {
-        "pk": 35,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Orange",
-            "name": "Syracuse University",
-            "abbr": "'Cuse"
-        }
-    },
-    {
-        "pk": 36,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Tar Heels",
-            "name": "North Carolina University",
-            "abbr": "UNC"
-        }
-    },
-    {
-        "pk": 37,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Vols",
-            "name": "University of Tennessee",
-            "abbr": "UT"
-        }
-    },
-    {
-        "pk": 38,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Cornhuskers",
-            "name": "University of Nebraska",
-            "abbr": "NU"
-        }
-    },
-    {
-        "pk": 39,
-        "model": "core.school",
-        "fields": {
-            "conference": 2,
-            "mascot": "Huskies",
-            "name": "University of Washington",
-            "abbr": "U-Dub"
-        }
-    },
-    {
-        "pk": 40,
-        "model": "core.school",
-        "fields": {
-            "conference": 9,
-            "mascot": "Bulls",
-            "name": "University of South Florida",
-            "abbr": "USF"
-        }
-    },
-    {
-        "pk": 41,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Tigers",
-            "name": "Clemson University",
-            "abbr": "CU"
-        }
-    },
-    {
-        "pk": 42,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Hurricanes",
-            "name": "University of Miami",
-            "abbr": "The U"
-        }
-    },
-    {
-        "pk": 43,
-        "model": "core.school",
-        "fields": {
-            "conference": 4,
-            "mascot": "Fighting Irish",
-            "name": "Notre Dame University",
-            "abbr": "ND"
-        }
-    },
-    {
-        "pk": 44,
-        "model": "core.school",
-        "fields": {
-            "conference": 5,
-            "mascot": "Knights",
-            "name": "University Central Florida",
-            "abbr": "UCF"
-        }
-    },
-    {
-        "pk": 45,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Bulldogs",
-            "name": "University of Georgia",
-            "abbr": "UGA"
-        }
-    },
-    {
-        "pk": 46,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Seminoles",
-            "name": "Florida State University",
-            "abbr": "FSU"
-        }
-    },
-    {
-        "pk": 47,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Gamecocks",
-            "name": "University of South Carolina",
-            "abbr": "USC"
-        }
-    },
-    {
-        "pk": 48,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Wildcats",
-            "name": "Northwestern University",
-            "abbr": "NU"
-        }
-    },
-    {
-        "pk": 49,
-        "model": "core.school",
-        "fields": {
-            "conference": 13,
-            "mascot": "Red Raiders",
-            "name": "Texas Tech University",
-            "abbr": "TTU"
-        }
-    },
-    {
-        "pk": 50,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Gators",
-            "name": "University of Florida",
-            "abbr": "UF"
-        }
-    },
-    {
-        "pk": 51,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Nittany Lions",
-            "name": "Pennsylvania State University",
-            "abbr": "Penn"
-        }
-    },
-    {
-        "pk": 52,
-        "model": "core.school",
-        "fields": {
-            "conference": 5,
-            "mascot": "Spartans",
-            "name": "Michigan State University",
-            "abbr": "MSU"
-        }
-    },
-    {
-        "pk": 53,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Crimson Tide",
-            "name": "University of Alabama",
-            "abbr": "UA"
-        }
-    },
-    {
-        "pk": 54,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Wolverines",
-            "name": "University of Michigan",
-            "abbr": "UM"
-        }
-    },
-    {
-        "pk": 55,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Bulldogs",
-            "name": "Mississippi State University",
-            "abbr": "MSU"
-        }
-    },
-    {
-        "pk": 56,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Badgers",
-            "name": "University of Wisconsin",
-            "abbr": "UW"
-        }
-    },
-    {
-        "pk": 57,
-        "model": "core.school",
-        "fields": {
-            "conference": 3,
-            "mascot": "Horned Frogs",
-            "name": "Texas Christian University",
-            "abbr": "TCU"
-        }
-    },
-    {
-        "pk": 58,
-        "model": "core.school",
-        "fields": {
-            "conference": 9,
-            "mascot": "Huskies",
-            "name": "University of Connecticut",
-            "abbr": "UConn"
-        }
-    },
-    {
-        "pk": 59,
-        "model": "core.school",
-        "fields": {
-            "conference": 13,
-            "mascot": "Sooners",
-            "name": "University of Oklahoma",
-            "abbr": "OU"
-        }
-    },
-    {
-        "pk": 60,
-        "model": "core.school",
-        "fields": {
-            "conference": 2,
-            "mascot": "Cardinals",
-            "name": "Stanford University",
-            "abbr": "SU"
-        }
-    },
-    {
-        "pk": 61,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Hokies",
-            "name": "Virginia Polytechnic Institute and State University",
-            "abbr": "VT"
-        }
-    },
-    {
-        "pk": 62,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Razorbacks",
-            "name": "University of Arkansas",
-            "abbr": "UA"
-        }
-    },
-    {
-        "pk": 63,
-        "model": "core.school",
-        "fields": {
-            "conference": 12,
-            "mascot": "Buckeyes",
-            "name": "Ohio State University",
-            "abbr": "OSU"
-        }
-    },
-    {
-        "pk": 64,
-        "model": "core.school",
-        "fields": {
-            "conference": 10,
-            "mascot": "Blue Raiders",
-            "name": "Middle Tennessee State University",
-            "abbr": "MTSU"
-        }
-    },
-    {
-        "pk": 65,
-        "model": "core.school",
-        "fields": {
-            "conference": 7,
-            "mascot": "Redhawks",
-            "name": "University of Miami, Ohio",
-            "abbr": "UM Ohio"
-        }
-    },
-    {
-        "pk": 66,
-        "model": "core.school",
-        "fields": {
-            "conference": 13,
-            "mascot": "Aggies",
-            "name": "Texas A&M",
-            "abbr": "TAMU"
-        }
-    },
-    {
-        "pk": 67,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Tigers",
-            "name": "Louisiana State University",
-            "abbr": "LSU"
-        }
-    },
-    {
-        "pk": 68,
-        "model": "core.school",
-        "fields": {
-            "conference": 9,
-            "mascot": "Panthers",
-            "name": "University of Pittsburg",
-            "abbr": "Pitt"
-        }
-    },
-    {
-        "pk": 69,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Wildcats",
-            "name": "University of Kentucky",
-            "abbr": "UK"
-        }
-    },
-    {
-        "pk": 70,
-        "model": "core.school",
-        "fields": {
-            "conference": 11,
-            "mascot": "Eagles",
-            "name": "Boston College",
-            "abbr": "BC"
-        }
-    },
-    {
-        "pk": 71,
-        "model": "core.school",
-        "fields": {
-            "conference": 3,
-            "mascot": "Raiders",
-            "name": "University of Nevada, Las Vegas",
-            "abbr": "UNLV"
-        }
-    },
-    {
-        "pk": 72,
-        "model": "core.school",
-        "fields": {
-            "conference": 6,
-            "mascot": "Wolfpack",
-            "name": "University of Nevada, Reno",
-            "abbr": "UNR"
-        }
-    },
-    {
-        "pk": 73,
-        "model": "core.school",
-        "fields": {
-            "conference": 1,
-            "mascot": "Tigers",
-            "name": "Auburn University",
-            "abbr": "AU"
-        }
-    },
-    {
-        "pk": 74,
-        "model": "core.school",
-        "fields": {
-            "conference": 2,
-            "mascot": "Ducks",
-            "name": "University of Oregon",
-            "abbr": "UO"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "core.season",
-        "fields": {
-            "current": true,
-            "year_start": "2011",
+        "pk": 3, 
+        "model": "core.season", 
+        "fields": {
+            "current": true, 
+            "year_start": "2011", 
             "year_end": "2012"
         }
-    },
+    }, 
     {
-        "pk": 2,
-        "model": "core.season",
+        "pk": 1, 
+        "model": "core.season", 
         "fields": {
-            "current": false,
-            "year_start": "2010",
+            "current": true, 
+            "year_start": "2011", 
+            "year_end": "2012"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "core.season", 
+        "fields": {
+            "current": false, 
+            "year_start": "2010", 
             "year_end": "2011"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Southeastern Conference", 
+            "abbr": "SEC"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Pacific 12", 
+            "abbr": "PAC 12"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Mountain West Conference", 
+            "abbr": "MWC"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Independent", 
+            "abbr": "Indp"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Conference USA", 
+            "abbr": "C-USA"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Western Athletic Conference", 
+            "abbr": "WAC"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "core.conference", 
+        "fields": {
+            "name": " Mid-American Conference", 
+            "abbr": "MAC"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Gulf South Conference", 
+            "abbr": "GSC"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Big East Conference", 
+            "abbr": "Big East"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Sun Belt Conference", 
+            "abbr": "SBC"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Atlantic Coast Conference", 
+            "abbr": "ACC"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Big 10", 
+            "abbr": "Big 10"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Big 12", 
+            "abbr": "Big 12"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "core.conference", 
+        "fields": {
+            "name": "Atlantic 10", 
+            "abbr": "A10"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "mascot": "Buffalos", 
+            "name": "University of Colorado", 
+            "abbr": "CU"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Gators", 
+            "name": "University of Florida", 
+            "abbr": "FLA"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "mascot": "Cougars", 
+            "name": "Bringham Young University", 
+            "abbr": "BYU"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "mascot": "Miners", 
+            "name": "University of Texas, El Paso", 
+            "abbr": "UTEP"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "mascot": "Bulldogs", 
+            "name": "Fresno State University", 
+            "abbr": "FSU"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "mascot": "Lobos", 
+            "name": "New Mexico University", 
+            "abbr": "UNM"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "mascot": "Huskies", 
+            "name": "Northern Illinois", 
+            "abbr": "NIU"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 8, 
+            "mascot": "Trojans", 
+            "name": "Troy University", 
+            "abbr": "Troy"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "mascot": "Bobcats", 
+            "name": "University of Ohio", 
+            "abbr": "OU"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "mascot": "Cardinals", 
+            "name": "Louisville University", 
+            "abbr": "UL"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "mascot": "Eagles", 
+            "name": "University of Southern Mississippi", 
+            "abbr": "USM"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "mascot": "Utes", 
+            "name": "University of Utah", 
+            "abbr": "U"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "mascot": "Broncos", 
+            "name": "Boise State University", 
+            "abbr": "BSU"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "mascot": "Midshipmen", 
+            "name": "Navy", 
+            "abbr": "Navy"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "mascot": "Warriors", 
+            "name": "University of Hawaii", 
+            "abbr": "UH"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 8, 
+            "mascot": "Aztecs", 
+            "name": "San Diego State University", 
+            "abbr": "SDSU"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "mascot": "Golden Hurricane", 
+            "name": "Tulsa University", 
+            "abbr": "TU"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "mascot": "Rockets", 
+            "name": "University of Toledo", 
+            "abbr": "UT"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 10, 
+            "mascot": "Golden Panthers", 
+            "name": "Florida International University", 
+            "abbr": "FIU"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Yellow Jackets", 
+            "name": "Georgia Tech University", 
+            "abbr": "GT"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "mascot": "Falcons", 
+            "name": "Air Force Football", 
+            "abbr": "Air Force"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "mascot": "Mountaineers", 
+            "name": "West Virginia University", 
+            "abbr": "WVU"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Wolfpack", 
+            "name": "North Carolina State University", 
+            "abbr": "NCSU"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Hawkeyes", 
+            "name": "University of Iowa", 
+            "abbr": "UI"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "mascot": "Tigers", 
+            "name": "University of Missouri", 
+            "abbr": "Mizzou"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Terrapins", 
+            "name": "University of Maryland", 
+            "abbr": "UMB"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "mascot": "Pirates", 
+            "name": "East Carolina University", 
+            "abbr": "ECU"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Fighting Illini", 
+            "name": "University of Illinonis", 
+            "abbr": "UI"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "mascot": "Bears", 
+            "name": "University of Baylor", 
+            "abbr": "UB"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "mascot": "Cowboys", 
+            "name": "Oklahoma State University", 
+            "abbr": "OSU"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "mascot": "Wildcats", 
+            "name": "University of Arizona", 
+            "abbr": "U of A"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "mascot": "Black Knights", 
+            "name": "U.S. Military Academy", 
+            "abbr": "Army"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Vols", 
+            "name": "University of Tennessee", 
+            "abbr": "UT"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "mascot": "Mustangs", 
+            "name": "South Methodist University", 
+            "abbr": "SMU"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "mascot": "Wildcats", 
+            "name": "Kansas State University", 
+            "abbr": "K-State"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Orange", 
+            "name": "Syracuse University", 
+            "abbr": "'Cuse"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Tar Heels", 
+            "name": "North Carolina University", 
+            "abbr": "UNC"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Cornhuskers", 
+            "name": "University of Nebraska", 
+            "abbr": "NU"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "mascot": "Huskies", 
+            "name": "University of Washington", 
+            "abbr": "U-Dub"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "mascot": "Bulls", 
+            "name": "University of South Florida", 
+            "abbr": "USF"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Tigers", 
+            "name": "Clemson University", 
+            "abbr": "CU"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Hurricanes", 
+            "name": "University of Miami", 
+            "abbr": "The U"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "mascot": "Fighting Irish", 
+            "name": "Notre Dame University", 
+            "abbr": "ND"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "mascot": "Knights", 
+            "name": "University Central Florida", 
+            "abbr": "UCF"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Bulldogs", 
+            "name": "University of Georgia", 
+            "abbr": "UGA"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Seminoles", 
+            "name": "Florida State University", 
+            "abbr": "FSU"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Gamecocks", 
+            "name": "University of South Carolina", 
+            "abbr": "USC"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Wildcats", 
+            "name": "Northwestern University", 
+            "abbr": "NU"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "mascot": "Red Raiders", 
+            "name": "Texas Tech University", 
+            "abbr": "TTU"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Gators", 
+            "name": "University of Florida", 
+            "abbr": "UF"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Nittany Lions", 
+            "name": "Pennsylvania State University", 
+            "abbr": "Penn"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "mascot": "Spartans", 
+            "name": "Michigan State University", 
+            "abbr": "MSU"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Crimson Tide", 
+            "name": "University of Alabama", 
+            "abbr": "UA"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Wolverines", 
+            "name": "University of Michigan", 
+            "abbr": "UM"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Bulldogs", 
+            "name": "Mississippi State University", 
+            "abbr": "MSU"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Badgers", 
+            "name": "University of Wisconsin", 
+            "abbr": "UW"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "mascot": "Horned Frogs", 
+            "name": "Texas Christian University", 
+            "abbr": "TCU"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "mascot": "Huskies", 
+            "name": "University of Connecticut", 
+            "abbr": "UConn"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "mascot": "Sooners", 
+            "name": "University of Oklahoma", 
+            "abbr": "OU"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "mascot": "Cardinals", 
+            "name": "Stanford University", 
+            "abbr": "SU"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Hokies", 
+            "name": "Virginia Polytechnic Institute and State University", 
+            "abbr": "VT"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Razorbacks", 
+            "name": "University of Arkansas", 
+            "abbr": "UA"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "mascot": "Buckeyes", 
+            "name": "Ohio State University", 
+            "abbr": "OSU"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 10, 
+            "mascot": "Blue Raiders", 
+            "name": "Middle Tennessee State University", 
+            "abbr": "MTSU"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "mascot": "Redhawks", 
+            "name": "University of Miami, Ohio", 
+            "abbr": "UM Ohio"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "mascot": "Aggies", 
+            "name": "Texas A&M", 
+            "abbr": "TAMU"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Tigers", 
+            "name": "Louisiana State University", 
+            "abbr": "LSU"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "mascot": "Panthers", 
+            "name": "University of Pittsburg", 
+            "abbr": "Pitt"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Wildcats", 
+            "name": "University of Kentucky", 
+            "abbr": "UK"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "mascot": "Eagles", 
+            "name": "Boston College", 
+            "abbr": "BC"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "mascot": "Raiders", 
+            "name": "University of Nevada, Las Vegas", 
+            "abbr": "UNLV"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "mascot": "Wolfpack", 
+            "name": "University of Nevada, Reno", 
+            "abbr": "UNR"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "mascot": "Tigers", 
+            "name": "Auburn University", 
+            "abbr": "AU"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "mascot": "Ducks", 
+            "name": "University of Oregon", 
+            "abbr": "UO"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 2, 
+            "rank": 1, 
+            "record": "19-0"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 1, 
+            "rank": 2, 
+            "record": "13-2-1"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 4, 
+            "rank": null, 
+            "record": "6-6"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 5, 
+            "rank": null, 
+            "record": "6-6"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 6, 
+            "rank": null, 
+            "record": "8-4"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 7, 
+            "rank": null, 
+            "record": "10-3"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 8, 
+            "rank": null, 
+            "record": "7-5"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 9, 
+            "rank": null, 
+            "record": "8-4"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 10, 
+            "rank": null, 
+            "record": "6-6"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 11, 
+            "rank": null, 
+            "record": "8-4"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 12, 
+            "rank": null, 
+            "record": "10-2"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 13, 
+            "rank": null, 
+            "record": "11-1"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 14, 
+            "rank": null, 
+            "record": "8-4"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 15, 
+            "rank": null, 
+            "record": "8-3"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 16, 
+            "rank": null, 
+            "record": "9-3"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "core.team", 
+        "fields": {
+            "season": 1, 
+            "school": 17, 
+            "rank": null, 
+            "record": "9-3"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": 4, 
+            "away_team": 3, 
+            "name": "New Mexico Bowl", 
+            "season": 1, 
+            "timezome": 1, 
+            "home_score": 21, 
+            "date": "2011-10-07 17:25:04", 
+            "away_score": 14, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": 12, 
+            "away_team": 11, 
+            "name": "Las Vegas Bowl", 
+            "season": 1, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-10-14 00:47:33", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": 10, 
+            "away_team": 9, 
+            "name": "St. Petersburg Bowl", 
+            "season": 1, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-10-14 00:41:30", 
+            "away_score": null, 
+            "channel": "ABC"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": 8, 
+            "away_team": 7, 
+            "name": "New Orleans Bowl", 
+            "season": 1, 
+            "timezome": 2, 
+            "home_score": 14, 
+            "date": "2011-10-13 22:42:42", 
+            "away_score": 21, 
+            "channel": "ABC"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": 6, 
+            "away_team": 5, 
+            "name": "Humanitarian Bowl", 
+            "season": 1, 
+            "timezome": 1, 
+            "home_score": 14, 
+            "date": "2011-10-13 22:39:45", 
+            "away_score": 17, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": 14, 
+            "away_team": 13, 
+            "name": "Poinsettia Bowl", 
+            "season": 1, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-10-14 18:08:58", 
+            "away_score": null, 
+            "channel": "NBC"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": 16, 
+            "away_team": 15, 
+            "name": "Hawaii Bowl", 
+            "season": 1, 
+            "timezome": 2, 
+            "home_score": null, 
+            "date": "2011-10-16 15:38:27", 
+            "away_score": null, 
+            "channel": "ABC"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Gildan New Mexico Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-17 14:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Famous Idaho Potato Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-17 17:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "R+L Carriers  New Orleans Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-17 21:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Beef 'O' Brady's St. Petersburg Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-20 20:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "San Diego County Credit Union Poinsettia Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-21 20:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "MAACO Bowl Las Vegas", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-22 20:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Sheraton Hawai'i Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-24 20:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "AdvoCare V100 Independence Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-26 17:00:00", 
+            "away_score": null, 
+            "channel": "ESPN2"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Little Caesars Pizza Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-27 14:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Belk Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-27 20:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Military Bowl presented by Northrop Grumman", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-28 14:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Bridgepoint Education  Holiday Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-28 20:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Champs Sports Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-29 17:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Valero Alamo Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-29 21:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Bell Helicopter Armed Forces Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-30 12:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "New Era Pinstripe Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-30 15:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Franklin American Mortgage Music City Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-30 18:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Insight Bowl\t", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-30 22:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Meineke Car Care Bowl of Texas", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-31 12:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Hyundai Sun Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-31 14:00:00", 
+            "away_score": null, 
+            "channel": "CBS"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "AutoZone Liberty Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-31 15:30:00", 
+            "away_score": null, 
+            "channel": "ABC"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Kraft Fight Hunger Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-31 15:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Chick-fil-A Bowl\t", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2011-12-31 19:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "TicketCity Bowl\t", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-02 12:00:00", 
+            "away_score": null, 
+            "channel": "ESPNU"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Capital One Bowl\t", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-02 13:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Outback Bowl\t", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-01 13:00:00", 
+            "away_score": null, 
+            "channel": "ABC"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Gator Bowl\t ", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-02 13:00:00", 
+            "away_score": null, 
+            "channel": "ESPN2"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Rose Bowl presented by Vizio", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-02 17:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Tostitos Fiesta Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-02 20:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Allstate Sugar Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-03 20:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Discover Orange Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-04 20:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "AT&T Cotton Bowl Classic", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-06 20:00:00", 
+            "away_score": null, 
+            "channel": "FOX"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "BBVA Compass Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-07 13:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "GoDaddy.com Bowl", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-08 21:00:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "core.game", 
+        "fields": {
+            "require_tie_breaker": false, 
+            "home_team": null, 
+            "away_team": null, 
+            "name": "Allstate BCS National Championship Game", 
+            "season": 3, 
+            "timezome": 1, 
+            "home_score": null, 
+            "date": "2012-01-09 20:30:00", 
+            "away_score": null, 
+            "channel": "ESPN"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 5, 
+            "winner": 11, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 5, 
+            "winner": 11, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 3, 
+            "winner": 8, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 3, 
+            "winner": 7, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 1, 
+            "winner": 4, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 1, 
+            "winner": 3, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 4, 
+            "winner": 9, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 1, 
+            "winner": 4, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 4, 
+            "winner": 10, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 5, 
+            "winner": 12, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 2, 
+            "winner": 6, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 6, 
+            "winner": 14, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 6, 
+            "winner": 14, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 5, 
+            "winner": 11, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 4, 
+            "winner": 10, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 3, 
+            "winner": 8, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 2, 
+            "winner": 5, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 6, 
+            "winner": 13, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 1, 
+            "winner": 4, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 5, 
+            "winner": 11, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 4, 
+            "winner": 10, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 3, 
+            "winner": 7, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 2, 
+            "winner": 6, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 6, 
+            "winner": 13, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 6, 
+            "winner": 14, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 3, 
+            "winner": 8, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 1, 
+            "winner": 4, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 4, 
+            "winner": 9, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 2, 
+            "winner": 5, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 5, 
+            "winner": 12, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 1, 
+            "winner": 4, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 2, 
+            "winner": 5, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 3, 
+            "winner": 8, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 4, 
+            "winner": 9, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 5, 
+            "winner": 12, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 6, 
+            "winner": 13, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 7, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 7, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 7, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 7, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 7, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 7, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 7, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 2, 
+            "winner": 5, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 4, 
+            "winner": 10, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 6, 
+            "winner": 13, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 1, 
+            "winner": 3, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 2, 
+            "winner": 6, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 3, 
+            "winner": 8, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 8, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 8, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 8, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 8, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 8, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 8, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 8, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 9, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 9, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 9, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 9, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 9, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 9, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 9, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 10, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 10, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 10, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 10, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 10, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 10, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 10, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 11, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 11, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 11, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 11, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 11, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 11, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 11, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 12, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 12, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 12, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 12, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 12, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 12, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 12, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 13, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 13, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 13, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 13, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 13, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 13, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 13, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 14, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 14, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 14, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 14, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 14, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 14, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 14, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 15, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 15, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 15, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 15, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 15, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 15, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 15, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 16, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 16, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 16, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 16, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 16, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 16, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 16, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 17, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 17, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 17, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 17, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 17, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 17, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 17, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 18, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 18, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 18, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 18, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 18, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 134, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 18, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 135, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 18, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 19, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 137, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 19, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 138, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 19, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 19, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 140, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 19, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 141, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 19, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 142, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 19, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 143, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 20, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 144, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 20, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 145, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 20, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 146, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 20, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 147, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 20, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 148, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 20, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 149, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 20, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 150, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 21, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 151, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 21, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 152, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 21, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 153, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 21, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 154, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 21, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 155, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 21, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 156, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 21, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 157, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 22, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 158, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 22, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 159, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 22, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 160, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 22, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 161, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 22, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 162, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 22, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 163, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 22, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 164, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 23, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 165, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 23, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 166, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 23, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 167, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 23, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 168, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 23, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 169, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 23, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 170, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 23, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 171, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 24, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 172, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 24, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 173, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 24, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 174, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 24, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 175, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 24, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 176, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 24, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 177, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 24, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 178, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 25, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 179, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 25, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 180, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 25, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 181, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 25, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 182, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 25, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 183, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 25, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 184, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 25, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 185, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 26, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 186, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 26, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 187, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 26, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 188, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 26, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 189, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 26, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 190, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 26, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 191, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 26, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 192, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 27, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 193, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 27, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 194, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 27, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 195, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 27, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 196, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 27, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 197, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 27, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 198, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 27, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 199, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 28, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 200, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 28, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 201, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 28, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 202, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 28, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 203, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 28, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 204, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 28, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 205, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 28, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 206, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 29, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 207, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 29, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 208, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 29, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 209, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 29, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 210, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 29, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 211, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 29, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 212, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 29, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 213, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 30, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 214, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 30, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 215, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 30, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 216, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 30, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 217, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 30, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 218, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 30, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 219, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 30, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 220, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 31, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 221, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 31, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 222, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 31, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 223, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 31, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 224, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 31, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 225, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 31, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 226, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 31, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 227, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 32, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 228, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 32, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 229, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 32, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 230, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 32, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 231, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 32, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 232, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 32, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 233, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 32, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 234, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 33, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 235, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 33, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 236, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 33, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 237, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 33, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 238, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 33, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 239, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 33, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 240, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 33, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 241, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 34, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 242, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 34, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 243, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 34, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 244, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 34, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 245, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 34, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 246, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 34, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 247, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 34, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 248, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 35, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 249, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 35, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 250, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 35, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 251, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 35, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 252, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 35, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 253, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 35, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 254, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 35, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 255, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 36, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 256, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 36, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 257, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 36, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 258, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 36, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 259, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 36, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 260, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 36, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 261, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 36, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 262, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 37, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 263, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 37, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 264, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 37, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 265, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 37, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 266, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 37, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 267, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 37, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 268, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 37, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 269, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 38, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 270, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 38, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 271, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 38, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 272, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 38, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 273, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 38, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 274, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 38, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 275, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 38, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 276, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 39, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 277, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 39, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 278, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 39, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 279, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 39, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 280, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 39, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 281, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 39, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 282, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 39, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 283, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 40, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 284, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 40, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 285, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 40, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 286, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 40, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 287, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 40, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 288, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 40, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 289, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 40, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 290, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 41, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 291, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 41, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 292, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 41, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 293, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 41, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 294, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 41, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 295, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 41, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 296, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 41, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 297, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 1, 
+            "game": 42, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 298, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 2, 
+            "game": 42, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 299, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 3, 
+            "game": 42, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 300, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 8, 
+            "game": 42, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 301, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 9, 
+            "game": 42, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 302, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 10, 
+            "game": 42, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
+        }
+    }, 
+    {
+        "pk": 303, 
+        "model": "core.pick", 
+        "fields": {
+            "player": 11, 
+            "game": 42, 
+            "winner": null, 
+            "home_score": null, 
+            "away_score": null
         }
     }
 ]
