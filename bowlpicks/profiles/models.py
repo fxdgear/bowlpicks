@@ -25,7 +25,7 @@ class Profile(ProfileBase):
 
 class Player(models.Model):
     profile = models.ForeignKey(Profile)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
 
     def __unicode__(self):
         return u"%s" % self.name
