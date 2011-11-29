@@ -14,9 +14,14 @@ class GameAdmin(admin.ModelAdmin):
         'away_team',
         'away_score',)
 
+
+class PickAdmin(admin.ModelAdmin):
+    list_filter = ('player__name', 'game__season__year_end', 'game__name', )
+    list_display = ('player', 'game', 'winner', )
+
 admin.site.register(Season)
 admin.site.register(Conference)
 admin.site.register(School)
 admin.site.register(Team)
 admin.site.register(Game, GameAdmin)
-admin.site.register(Pick)
+admin.site.register(Pick, PickAdmin)
