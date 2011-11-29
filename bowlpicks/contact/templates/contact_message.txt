@@ -6,4 +6,4 @@ Message:
 {{ message }}
 =======
 
-This message was sent from lab305.com. Please do not reply.
+This message was sent from bowlpicks.nicklang.com. Please do not reply.
