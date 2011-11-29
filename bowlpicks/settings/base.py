@@ -138,6 +138,7 @@ THIRDPARTY_APPS = [
 PROJECT_APPS = [
     'bowlpicks.core',
     'bowlpicks.profiles',
+    'bowlpicks.contact',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRDPARTY_APPS + PROJECT_APPS

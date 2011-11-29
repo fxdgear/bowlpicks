@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^$', HomePage.as_view(), {}, 'homepage'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
+    (r'^contact/thankyou/', 'bowlpicks.contact.views.thankyou'),
+    (r'^contact/', 'bowlpicks.contact.views.contactview', {}, 'contact'),
     url(r'^picks/', include('bowlpicks.core.urls.picks')),
     url(r'^profiles/(?P<pk>\d+)/$', profile_detail, {}, 'bowlpicks_profile_detail'),
     url(r'^profiles/(?P<pk>\d+)/picks$', DetailView.as_view(
