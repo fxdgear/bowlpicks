@@ -1,0 +1,16 @@
+{% extends "flatpages/base.html" %}
+{% load markup %}
+
+{% block content %}
+  <div class="hero-unit">
+    <div class="row">
+      <div class="span12">
+        <h1>{{ flatpage.title }}</h1>
+        <hr>
+
+        {{ flatpage.url }}
+        {{ flatpage.content|markdown }}
+      </div>
+    </div>
+  </div>
+{% endblock content %}

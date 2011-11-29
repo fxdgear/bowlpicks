@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block nav %}
+  <li><a href="{% url homepage %}">Home</a></li>
+  <li><a href="{% url pick_list %}">Pick List</a></li>
+  {% ifequal flatpage.url "/help/" %}
+    <li class="active"><a href="/help/">Help</a></li>
+  {% else %}
+    <li><a href="/help/">Help</a></li>
+  {% endifequal %}
+{% endblock nav %}

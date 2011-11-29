@@ -126,6 +126,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.flatpages',
+    'django.contrib.markup',
 ]
 
 THIRDPARTY_APPS = [
