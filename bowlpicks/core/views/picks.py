@@ -1,4 +1,3 @@
-import ipdb
 from django.shortcuts import render_to_response
 from django.template import RequestContext  #, loader, Context
 from django.http import HttpResponse, HttpResponseForbidden
