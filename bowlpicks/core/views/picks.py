@@ -1,3 +1,4 @@
+import ipdb
 from django.shortcuts import render_to_response
 from django.template import RequestContext  #, loader, Context
 from django.http import HttpResponse, HttpResponseForbidden
@@ -80,3 +81,28 @@ def pick_detail(request, *args, **kwargs):
         'picks': picks,
         'season': season
     }, context_instance=RequestContext(request))
+
+
+@login_required
+def tie_breaker(request, *args, **kwargs):
+    profile = request.user.get_profile()
+    player_id = request.GET.get('player_id')
+    home_or_away = request.GET.get('home_or_away')
+    score = request.GET.get('score')
+
+    try:
+        player = profile.player_set.get(pk=player_id)
+    except:
+        return HttpResponseForbidden()
+
+    pick = player.pick_set.get(game__require_tie_breaker=True)
+    if pick.game.season.is_froze:
+        return HttpResponseForbidden()
+
+    if request.is_ajax and request.method == "GET":
+        if home_or_away == "home":
+            pick.home_score = score
+        elif home_or_away == "away":
+            pick.away_score = score
+        pick.save()
+        return HttpResponse(status=200)

@@ -75,6 +75,26 @@
           });
     };
 
+    var updateScore = function(data) {
+      var score = data.val()
+      var player_id = data.attr('id').split("_")[0]
+      var home_or_away = data.attr('id').split("_")[1]
+
+      $.get('{% url tie_breaker %}',
+        { player_id: player_id, home_or_away: home_or_away, score: score},
+        function (data){
+          console.log("Player: '" + player_id + "': " + home_or_away + " score: " + score);
+        });
+    };
+
+
+    $('form input').keyup(function(){
+      $(this).doTimeout( 'tie-breaker', 1000, function(){
+          updateScore(this);
+          //$('#text-type').text( this.val() || default_text );
+      });
+    });
+
   </script>
 {% endblock extended_js %}
 
@@ -103,12 +123,30 @@
        <div class="span">
           <h3>{{ player }}</h3>
           {% for pick in player.pick_set.curent_season %}
+            {% if forloop.last %}
+            <p>
+              * <a class="choice{% if pick.winner == pick.game.home_team %} selected{% endif %}"
+              onClick="upDatePick({{pick.game.pk}}, {{pick.game.home_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.home_team.school.abbr}}</a>
+              vs.
+              <a class="choice{% if pick.winner == pick.game.away_team %} selected{% endif %}" onClick="upDatePick({{pick.game.pk}}, {{pick.game.away_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.away_team.school.abbr}}</a>
+            </p>
+            <hr>
+            <p><strong>* Tie-Breaker</strong></p>
+            <div class="clearfix">
+              <form>
+                <input class="span1 tie-breaker" id="{{ player.pk }}_home_score" name="{{ player.pk }}_home_score" type="text" {% if pick.home_score %}value="{{ pick.home_score }}"{% endif %}>
+                -
+                <input class="span1 tie-breaker" id="{{ player.pk }}_away_score" name="{{ player.pk }}_away_score" type="text" {% if pick.away_score %}value="{{ pick.away_score }}"{% endif %}>
+              </form>
+            </div>
+            {% else %}
             <p>
               <a class="choice{% if pick.winner == pick.game.home_team %} selected{% endif %}"
               onClick="upDatePick({{pick.game.pk}}, {{pick.game.home_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.home_team.school.abbr}}</a>
               vs.
               <a class="choice{% if pick.winner == pick.game.away_team %} selected{% endif %}" onClick="upDatePick({{pick.game.pk}}, {{pick.game.away_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.away_team.school.abbr}}</a>
             </p>
+            {% endif %}
           {% endfor %}
       </div>
     {% endfor %}
