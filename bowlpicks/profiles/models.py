@@ -26,6 +26,7 @@ class Profile(ProfileBase):
 class Player(models.Model):
     profile = models.ForeignKey(Profile)
     name = models.CharField(max_length=100, unique=True)
+    paid = models.BooleanField(default=False)
 
     def __unicode__(self):
         return u"%s" % self.name
