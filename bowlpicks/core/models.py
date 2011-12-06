@@ -45,9 +45,12 @@ class Conference(models.Model):
 class School(models.Model):
 
     name = models.CharField(max_length=100)
-    abbr = models.CharField(max_length=10)
+    abbr = models.CharField(max_length=100)
     mascot = models.CharField(max_length=100)
     conference = models.ForeignKey(Conference)
+
+    class Meta:
+        ordering = ['name',]
 
     def __unicode__(self):
         return u"%s %s" % (self.name, self.mascot)
