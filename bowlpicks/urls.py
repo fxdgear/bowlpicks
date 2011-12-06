@@ -6,7 +6,7 @@ admin.autodiscover()
 
 from bowlpicks.core.views import HomePage
 from bowlpicks.profiles.models import Profile
-from bowlpicks.profiles.views import profile_detail
+from bowlpicks.profiles.views import profile_detail, delete_player
 
 
 urlpatterns = patterns('',
@@ -20,5 +20,6 @@ urlpatterns = patterns('',
     url(r'^profiles/(?P<pk>\d+)/picks$', DetailView.as_view(
                 template_name="profiles/profile_picks.html",
                 model=Profile), {}, 'profile_picks'),
-    url(r"^profiles/", include("idios.urls"))
+    url(r'profiles/delete_player/(?P<player_id>\d+)/$', delete_player, {}, 'bowlpicks_delete_player'),
+    url(r"^profiles/", include("idios.urls")),
 )

@@ -34,15 +34,14 @@
   <div class="row">
     <div class="span6">
       <h3>My Players</h3>
-      <ul>
         {% if not profile.player_set.all %}
           <p>You have no players, please create one now!</p>
         {% else %}
           {% for player in profile.player_set.all %}
-            <li><a href="{% url pick_detail player.pk %}">{{ player }}</a></li>
+            <p><a href="{% url pick_detail player.pk %}"><strong>{{ player }}</strong></a> -
+            <a class="btn small danger" href="{% url bowlpicks_delete_player player.pk %}">Delete</a></p>
           {% endfor %}
         {% endif %}
-      </ul>
     </div>
 
     <div class="span offset3 add-player">
