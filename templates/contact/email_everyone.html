@@ -1,0 +1,25 @@
+{% extends "contact/base.html" %}
+
+{% block content %}
+<div class="hero-unit">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset1">
+        <form action="{% url email_everyone %}" method="post">
+          {% csrf_token %}
+          <fieldset>
+            <legend>Email Everyone</legend>
+
+           {% include "forms/form.html" %}
+
+          <div class="actions">
+            <input type="submit" class="btn primary" value="Submit">&nbsp;
+            <button type="reset" class="btn">Cancel</button>
+          </div>
+          </fieldset>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

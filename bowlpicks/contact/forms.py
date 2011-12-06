@@ -6,3 +6,8 @@ class ContactForm(forms.Form):
     email = forms.EmailField()
     topic = forms.CharField()
     message = forms.CharField(widget=forms.Textarea)
+
+
+class EmailForm(forms.Form):
+    subject = forms.CharField()
+    message = forms.CharField(widget=forms.Textarea)
