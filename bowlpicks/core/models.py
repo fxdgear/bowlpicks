@@ -1,9 +1,12 @@
 from django.db import models
 import datetime
-from django.db.models import signals
+from django.http import HttpRequest
+from django.core.urlresolvers import reverse
 from django.db.models.signals import post_save
+import urllib2
 
 from bowlpicks.profiles.models import Player
+from bowlpicks.core.utils import expire_view_cache
 
 
 class SeasonManager(models.Manager):
@@ -172,4 +175,10 @@ def pick_post_save(sender, instance, signal, *args, **kwargs):
         player.active = True
         player.save()
 
+
+def game_post_save(sender, instance, signal, *args, **kwargs):
+    expire_view_cache("pick_list")
+
+
 post_save.connect(pick_post_save, sender=Pick)
+post_save.connect(game_post_save, sender=Game)

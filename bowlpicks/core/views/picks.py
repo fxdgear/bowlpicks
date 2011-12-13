@@ -38,7 +38,7 @@ def create_pick(request, *args, **kwargs):
         return HttpResponse(status=200)
 
 
-@cache_page(60 * 15)
+@cache_page(60 * 60 * 24)
 def pick_list(request, *args, **kwargs):
     template_name = kwargs.pop('template', "pick/pick_list_new.html")
     season = Season.objects.filter(current=True)[0]
