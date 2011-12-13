@@ -63,3 +63,15 @@ body {
 .bowlpick-container {
 
 }
+
+.popover .content {
+  background-color: #ffffff;
+  padding: 20px;
+  margin:1px;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}

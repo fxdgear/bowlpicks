@@ -12,9 +12,22 @@
 
 {%block extended_js %}
   <script src="{{ STATIC_URL }}js/jquery.tools.min.js"></script>
+  {% comment %}
   <script type="text/javascript">
     $(".circle").tooltip();
   </script>
+  {% endcomment %}
+  <script>
+    $(function () {
+      $(".circle")
+        .popover({
+          offset: 10,
+          html: true,
+          placement: 'above'
+        })
+    })
+  </script>
+
 {% endblock extended_js %}
 
 {% block extended_css %}
@@ -101,13 +114,14 @@
       <article>
         <header><h4>{{ player }}</h4></header>
         {% for pick in picks %}
-          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}">{{ pick.game }}</div>
-
-          <div class="tooltip" id="game-{{ pick.game.pk }}">
-              <p><strong>{{ pick.game.name }}</strong></br>
-              <strong>{{ pick.game.short_name }}</strong></p>
-              <p>{% if pick.game.winner %}Winner: <em>{{ pick.game.winner.school.abbr }}</em>{% endif %}</p>
-          </div>
+          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}"
+            data-original-title="{{ pick.game.name }}"
+            data-content="
+              <p style='margin-right:20px'>{{ pick.game.short_name }}</p>
+              <p><strong>Picked:</strong> {{ pick.winner.school.abbr }}
+              {% if pick.game.winner.school %}
+                <strong>Winner:</strong>{{ pick.game.winner.school.abbr }}
+              {% endif %}">{{ pick.game }}</div>
 
         {% endfor %}
         <div class="score"><p><strong>{{ player.points }}</strong>/{{ player.wrong }}</p></div>
