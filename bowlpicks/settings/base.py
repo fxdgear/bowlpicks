@@ -99,6 +99,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -106,6 +107,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
 ROOT_URLCONF = 'bowlpicks.urls'
@@ -153,6 +155,8 @@ ABSOLUTE_URL_OVERRIDES = {
 AUTH_PROFILE_MODULE = "profiles.Profile"
 
 LOGIN_REDIRECT_URL = "/"
+
+CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
