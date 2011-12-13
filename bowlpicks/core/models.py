@@ -174,6 +174,7 @@ def pick_post_save(sender, instance, signal, *args, **kwargs):
     if not player.active:
         player.active = True
         player.save()
+    expire_view_cache("pick_list")
 
 
 def game_post_save(sender, instance, signal, *args, **kwargs):
