@@ -1,5 +1,7 @@
 from django.db import models
 import datetime
+from django.db.models import signals
+from django.db.models.signals import post_save
 
 from bowlpicks.profiles.models import Player
 
@@ -161,3 +163,13 @@ class Pick(models.Model):
             return self.winner == self.game.winner
         else:
             return None
+
+
+def pick_post_save(sender, instance, signal, *args, **kwargs):
+    pick = instance
+    player = pick.player
+    if not player.active:
+        player.active = True
+        player.save()
+
+post_save.connect(pick_post_save, sender=Pick)
