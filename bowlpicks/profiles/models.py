@@ -27,6 +27,7 @@ class Player(models.Model):
     profile = models.ForeignKey(Profile)
     name = models.CharField(max_length=100, unique=True)
     paid = models.BooleanField(default=False)
+    active = models.BooleanField(default=False)
 
     def __unicode__(self):
         return u"%s" % self.name
@@ -46,7 +47,3 @@ class Player(models.Model):
             if not p.correct:
                 count += 1
         return count
-
-    @property
-    def active(self):
-        return self.pick_set.curent_season().count()

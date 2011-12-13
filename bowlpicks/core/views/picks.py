@@ -2,6 +2,8 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext  #, loader, Context
 from django.http import HttpResponse, HttpResponseForbidden
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import cache_page
+
 
 from django.views.generic.edit import ProcessFormView
 from django.views.generic.base import View
@@ -36,18 +38,18 @@ def create_pick(request, *args, **kwargs):
         return HttpResponse(status=200)
 
 
+@cache_page(60 * 15)
 def pick_list(request, *args, **kwargs):
     template_name = kwargs.pop('template', "pick/pick_list_new.html")
     season = Season.objects.filter(current=True)[0]
     games = season.game_set.all().order_by('date')
-    player_list = [p for p in Player.objects.all() if p.active]
-    players = []
+    player_list = Player.objects.filter(active=True).select_related()
 
     # create a list of tuples (player, player_picks) where player picks are odered
     # by game date to match the list of games above.
-    for p in player_list:
-        players.append((p, p.pick_set.curent_season().order_by('game__date')))
+    players = [(p, p.pick_set.curent_season().order_by('game__date')) for p in player_list]
 
+    # sort list by top scoring players
     players = sorted(players, key=lambda player: player[0].points, reverse=True)
 
     return render_to_response(template_name, {
