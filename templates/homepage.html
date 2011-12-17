@@ -9,33 +9,39 @@
 
 {% block content %}
   <div class="row">
-    <div class="span12">
+    <div class="span15">
       <h2>Today's Games</h2>
       <hr/>
       <div class="row">
-        <div class="span12">
+        <div class="span15">
         {% if todays_games %}
           {% for game in todays_games %}
             <div class="game-title">
               <h3>{{ game.name }} <small>{{ game.date|date:"g:i a" }} {{ game.get_timezome_display }} on {{ game.channel }}</small></h3>
             </div>
             <div class="row">
-              <div class="game-detail">
-                <div class="span" id="home-team">
-                  <p><small>({{ game.home_team.rank }})</small> <strong>{{ game.home_team.school }}</strong> ({{ game.home_team.record }})</br>
+                <div class="span5" id="home-team">
+                  <p><small>
+                    {% if home_team.rank %}
+                      ({{ game.home_team.rank }})
+                    {% endif %}
+                    </small> <strong>{{ game.home_team.school.abbr }}</strong> ({{ game.home_team.record }})</br>
                   <small>{{ game.home_team.school.conference }}</small></p>
                   <p>{% if game.winner_home %}&#x2605; {% endif %}<strong>{{ game.home_picks.count }}</strong> Picks</p>
                 </div>
-                <div class="span">
+                <div class="span2">
                   <h3>VS</h3>
                 </div>
-                <div class="span" id="away-team">
-                  <p><small>({{ game.away_team.rank }})</small> <strong>{{ game.away_team.school }}</strong> ({{ game.away_team.record }})</br>
+                <div class="span5" id="away-team">
+                  <p><small>
+                    {% if away_team.rank %}
+                      ({{ game.away_team.rank }})
+                    {% endif %}
+                    </small> <strong>{{ game.away_team.school.abbr }}</strong> ({{ game.away_team.record }})</br>
                   <small>{{ game.away_team.school.conference }}</small></p>
                   <p>{% if game.winner_away %}&#x2605; {% endif %}<strong>{{ game.away_picks.count }}</strong> Picks</p>
                 </div>
               </div>
-            </div>
           {% endfor %}
         {% else %}
         <h2>No games today! :(</h2>
@@ -44,7 +50,7 @@
       </div>
     </div> <!-- end span12 -->
 
-    <div class="span">
+    <div class="span3">
       <h3>Leaderboard</h3>
       <ol>
         {% for points, player in season.leaders %}
