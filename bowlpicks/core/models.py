@@ -90,13 +90,13 @@ class GameManger(models.Manager):
     def today(self, *args, **kwargs):
         return self.filter(
             date__lt=datetime.datetime.today() + datetime.timedelta(days=1),
-            date__gte=datetime.datetime.today()).order_by('-date')
+            date__gte=datetime.datetime.today()).order_by('date')
 
     def tomorrow(self, *args, **kwargs):
         tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
         return self.filter(
             date__lt=tomorrow + datetime.timedelta(days=1),
-            date__gte=tomorrow).order_by('-date')
+            date__gte=tomorrow).order_by('date')
 
 
 class Game(models.Model):
