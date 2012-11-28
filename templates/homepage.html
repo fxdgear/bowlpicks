@@ -59,7 +59,7 @@
                 </div>
               {% endfor %}
             {% else %}
-              <h2>No games today! :(</h2>
+              <h2>No games asdfasdf today! :(</h2>
             {% endif %}
           </div>
 
@@ -69,31 +69,29 @@
               <h2>{{ game.name }} <small>{{ game.date|date:"g:i a" }} {{ game.get_timezome_display }} on {{ game.channel }}</small></h2>
             </div>
 
+            <div class="span2">
+              <div style="font-size: 100px;">
+                <span class="chartwell pies">
+                  <span style="color: {{ game.home_team.school.color }}">{{ game.home_percent }}</span>
+                  <span style="color: {{ game.away_team.school.color }}">{{ game.away_percent }}</span>
+                  <span style="color: #fff">A</span> <!-- medium sized white centre piece -->
+                </span>
+              </div>
+            </div>
+
             <div class="span3">
               <p><small>
                 {% if home_team.rank %}
                   ({{ game.home_team.rank }})
                 {% endif %}
                 </small>
-                <strong>{{ game.home_team.school.abbr }}</strong>
+                <strong style="color: {{ game.home_team.school.color }}">{{ game.home_team.school.abbr }} {% if game.winner_home %}<i class="icon-star"></i>{% endif %} </strong>
                 ({{ game.home_team.record }})</br>
                 <small>{{ game.home_team.school.conference }}</small>
               </p>
-              <p>{% if game.winner_home %}&#x2605; {% endif %}<strong>{{ game.home_picks.count }}</strong> Picks</p>
             </div>
 
-            <div class="span2">
-              <div style="font-size: 100px;">
-                <span class="chartwell pies">
-                  <span style="color: #48eacf">45</span>
-                  <span style="color: #82cff2">20</span>
-                  <span class="segment03">14</span>
-                  <span style="color: #bdb1dd">7</span>
-                  <span style="color: #be8ecc">14</span>
-                  <span style="color: #fff">A</span> <!-- medium sized white centre piece -->
-                </span>
-              </div>
-            </div>
+
 
             <div class="span1">
               <h3>VS</h3>
@@ -105,25 +103,12 @@
                   ({{ game.away_team.rank }})
                 {% endif %}
                 </small>
-                <strong>{{ game.away_team.school.abbr }}</strong>
+                <strong style="color: {{ game.away_team.school.color }}">{{ game.away_team.school.abbr }} {% if game.winner_away %}<i class="icon-star"></i>{% endif %} </strong>
                 ({{ game.away_team.record }})</br>
                 <small>{{ game.away_team.school.conference }}</small>
               </p>
-              <p>{% if game.winner_away %}&#x2605; {% endif %}<strong>{{ game.away_picks.count }}</strong> Picks</p>
             </div>
 
-            <div class="span2">
-              <div style="font-size: 100px;">
-                <span class="chartwell pies">
-                  <span style="color: #48eacf">45</span>
-                  <span style="color: #82cff2">20</span>
-                  <span class="segment03">14</span>
-                  <span style="color: #bdb1dd">7</span>
-                  <span style="color: #be8ecc">14</span>
-                  <span style="color: #fff">A</span> <!-- medium sized white centre piece -->
-                </span>
-              </div>
-            </div>
 
           </div>
           {% endfor %}

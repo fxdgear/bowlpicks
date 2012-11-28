@@ -130,6 +130,14 @@ class Game(models.Model):
     def away_picks(self):
         return self.pick_set.filter(winner=self.away_team)
 
+    def away_percent(self):
+        value = (float(self.away_picks().count()) / float(self.pick_set.count())) * 100
+        return int(value)
+
+    def home_percent(self):
+        value = (float(self.home_picks().count()) / float(self.pick_set.count())) * 100
+        return int(value)
+
     @property
     def winner_home(self):
         return self.home_picks().count() > self.away_picks().count()
