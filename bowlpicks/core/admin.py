@@ -19,9 +19,32 @@ class PickAdmin(admin.ModelAdmin):
     list_filter = ('player__name', 'game__season__year_end', 'game__name', )
     list_display = ('player', 'game', 'winner', )
 
-admin.site.register(Season)
-admin.site.register(Conference)
-admin.site.register(School)
-admin.site.register(Team)
+
+class SeasonAdmin(admin.ModelAdmin):
+    list_display = ('year_start', 'year_end', 'current', 'freeze_date')
+
+
+class ConferenceAdmin(admin.ModelAdmin):
+    list_display = ('abbr', 'name')
+
+
+class TeamInline(admin.TabularInline):
+    model = Team
+
+class SchoolAdmin(admin.ModelAdmin):
+    list_display = ('name', 'abbr', 'mascot', 'conference', 'color')
+    inlines = [TeamInline, ]
+    list_editable = ('color',)
+
+
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ('school', 'season', 'record', 'rank')
+    list_filter = ('season', )
+
+
+admin.site.register(Season, SeasonAdmin)
+admin.site.register(Conference, ConferenceAdmin)
+admin.site.register(School, SchoolAdmin)
+admin.site.register(Team, TeamAdmin)
 admin.site.register(Game, GameAdmin)
 admin.site.register(Pick, PickAdmin)

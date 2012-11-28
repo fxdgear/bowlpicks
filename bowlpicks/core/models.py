@@ -53,6 +53,7 @@ class School(models.Model):
     abbr = models.CharField(max_length=100)
     mascot = models.CharField(max_length=100)
     conference = models.ForeignKey(Conference)
+    color = models.CharField(max_length=15, blank=True, null=True)
 
     class Meta:
         ordering = ['name',]
@@ -98,13 +99,15 @@ class GameManger(models.Manager):
             date__lt=tomorrow + datetime.timedelta(days=1),
             date__gte=tomorrow).order_by('date')
 
+def get_current_season():
+    return Season.objects.current()
 
 class Game(models.Model):
     date = models.DateTimeField()
-    timezome = models.IntegerField(choices=TIMEZONES)
-    season = models.ForeignKey(Season)
+    timezome = models.IntegerField(choices=TIMEZONES, default=EST)
+    season = models.ForeignKey(Season, default=get_current_season())
     name = models.CharField(max_length=100)
-    channel = models.CharField(max_length=100)
+    channel = models.CharField(max_length=100, default="Change Me")
     away_team = models.ForeignKey(Team, related_name="away_team", blank=True, null=True)
     away_score = models.IntegerField(blank=True, null=True)
     home_team = models.ForeignKey(Team, related_name="home_team", blank=True, null=True)
