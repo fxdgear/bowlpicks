@@ -40,42 +40,52 @@
 </head>
 
 <body>
-  <div class="topbar-wrapper" style="z-index: 5;">
-    <div class="topbar">
-      <div class="fill">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
-          <h3><a href="{% url homepage %}">BowlPicker</a></h3>
-          <ul>
-            {% block nav %}
-              <li class="active"><a href="{% url homepage %}">Home</a></li>
-              <li><a href="{% url pick_list %}">Pick List</a></li>
-              <li><a href="/help/">Help</a></li>
-            {% endblock nav %}
-          </ul>
-          <ul class="nav secondary-nav">
-            {% if user.is_authenticated %}
-              <li class="menu">
-                <a href="#" class="menu">{{ user.get_profile }}</a>
-                <ul class="menu-dropdown">
-                  <li><a href="{% url bowlpicks_profile_detail user.get_profile.pk %}">Profile</a></li>
-                  <li><a href="{% url profile_picks user.get_profile.pk %}">My Picks</a></li>
-                  <li class="divider"></li>
-                  {% if user.is_staff %}
-                  <li><a href="{% url email_everyone %}">Email Everyone</a></li>
-                  <li class="divider"></li>
-                  {% endif %}
-                  <li><a href="{% url auth_logout %}">Log out</a></li>
-                </ul>
-              </li>
-            {% else %}
-              <li><a href="{% url auth_login %}">Log in</a></li>
-              <li><a href="{% url registration_register %}">Register</a></li>
-            {% endif %}
-          </ul>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="{% url homepage %}">BowlPicker</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              {% block nav %}
+                <li class="active"><a href="{% url homepage %}">Home</a></li>
+                <li><a href="{% url pick_list %}">Pick List</a></li>
+                <li><a href="/help/">Help</a></li>
+              {% endblock nav %}
+            </ul>
+            <ul class="nav pull-right">
+                {% if user.is_anonymous %}
+                  <li class="divider-vertical"></li>
+                  <li><a href="{% url auth_login %}">Log in</a></li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="{% url registration_register %}">Register</a></li>
+                {% else %}
+                  <li class="menu">
+                  <li class="divider-vertical"></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.get_profile }} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% url bowlpicks_profile_detail user.get_profile.pk %}"><i class="icon-user"></i> Profile</a></li>
+                      <li><a href="{% url profile_picks user.get_profile.pk %}"><i class="icon-pencil"></i> My Picks</a></li>
+                      <li class="divider"></li>
+                      {% if user.is_staff %}
+                        <li><a href="{% url email_everyone %}">Email Everyone</a></li>
+                        <li class="divider"></li>
+                      {% endif %}
+                      <li><a href="{% url auth_logout %}"><i class="icon-off"></i> Log out</a></li>
+                    </ul>
+                  </li>
+                {% endif %}
+                <li class="divider-vertical" style="padding:-5px;margin-right:0px;"></li>
+              </ul>
+          </div><!--/.nav-collapse -->
         </div>
-      </div> <!-- /fill -->
-    </div> <!-- /topbar -->
-  </div> <!-- topbar-wrapper -->
+      </div>
+    </div>
 
     <div class="container bowlpick-container">
 
@@ -108,12 +118,11 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="{{ STATIC_URL}}js/libs/jquery-1.6.2.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script src="{{ STATIC_URL}}js/jquery.js"></script>
 
 
   <!-- scripts concatenated and minified via ant build script-->
-  <script defer src="{{ STATIC_URL }}js/application.js"></script>
+  <script defer src="{{ STATIC_URL }}js/bootstrap.js"></script>
   <script defer src="{{ STATIC_URL }}js/prettify.js"></script>
   <script defer src="{{ STATIC_URL }}js/plugins.js"></script>
   <script defer src="{{ STATIC_URL }}js/script.js"></script>

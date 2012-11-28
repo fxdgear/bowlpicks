@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "profiles/profile_base.html" %}
 
 {% block extended_css %}
   <style>
@@ -19,33 +19,29 @@
     {{ profile }} Profile
 {% endblock subtitle %}
 
-{% block header %}
-  <div class="page-header">
-    <h1>{{ profile.full_name }}</h1>
-     {% if season.is_froze %}
-      <h3>Picks are now frozen.</h3>
-    {% else %}
-      <h3>Picks will be frozen on {{ season.freeze_date }}</h3>
-    {% endif %}
-  </div>
-{% endblock header %}
 
 {% block content %}
   <div class="row">
-    <div class="span6">
+    <div class="hero-unit">
+      <h2>My Profile - {{ user.get_profile }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4 offset1">
       <h3>My Players</h3>
         {% if not profile.player_set.all %}
           <p>You have no players, please create one now!</p>
         {% else %}
           {% for player in profile.player_set.all %}
             <p><a href="{% url pick_detail player.pk %}"><strong>{{ player }}</strong></a> -
-            <a class="btn small danger" href="{% url bowlpicks_delete_player player.pk %}">Delete</a></p>
+            <a class="btn btn-mini btn-danger" href="{% url bowlpicks_delete_player player.pk %}">Delete</a></p>
           {% endfor %}
         {% endif %}
     </div>
 
-    <div class="span offset3 add-player">
+    <div class="span offset1 add-player">
       <form method="post" action="{% url bowlpicks_profile_detail profile.pk%}">
+        {% csrf_token %}
         <fieldset>
           <legend>Add a new player</legend>
           <div class="clearfix">
@@ -55,7 +51,7 @@
             </div>
           </div>
           <div class="actions">
-            <input type="submit" class="btn primary" value="Create Player">
+            <input type="submit" class="btn btn-primary" value="Create Player">
           </div>
         </fieldset>
       </form>

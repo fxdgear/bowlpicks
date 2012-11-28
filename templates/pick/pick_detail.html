@@ -73,11 +73,23 @@
       var selected = selected;
       var parent = $(selected).parent()
 
+      $.ajax({
+        url: '{% url pick_create %}',
+        data: {game: game_id, winner: winner_id, player: player_id},
+        type: 'get',
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+            alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+        },
+        success: function(data) {
+          markSelected(selected, parent);
+        }
+      });
+
       $.get('{% url pick_create %}',
         {game: game_id, winner: winner_id, player: player_id},
         function(data) {
           markSelected(selected, parent);
-          });
+      });
     };
 
     var updateScore = function(data) {
@@ -127,11 +139,32 @@
 {% endblock header %}
 
 {% block content %}
-    <div class="row">
-        <div class="span6">
-            {% for pick in picks %}
-              {% include "pick/pick_picklist.html" %}
-            {% endfor %}
+  <div class="row">
+    <div class="hero-unit">
+      <h1>Picks for {{ player }} <small>{{ season }}</small></h1>
+      <p>Click on a team name to make your selection.</br>
+        <small>Any questions contact <a href="mailto:nick@nicklang.com">Nick</a></small>
+      </p>
+      {% if season.is_froze %}
+        <div class="alert alert-error fade in" data-alert="alert">
+          <a class="close" href="#">×</a>
+          <strong>Game Time!</strong> Picks are now frozen.
         </div>
+      {% else %}
+        <div class="alert-message info fade in" data-alert="alert">
+          <a class="close" href="#">×</a>
+          <p><strong>Heads Up!</strong> Picks will be frozen on {{ season.freeze_date }}</p>
+        </div>
+      {% endif %}
     </div>
+  </div>
+  <div class="row">
+    <div class="span4 offset1">
+      {% for pick in picks %}
+        {% include "pick/pick_picklist.html" %}
+      {% endfor %}
+    </div>
+  </div>
 {% endblock content %}
+
+

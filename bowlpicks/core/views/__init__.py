@@ -13,4 +13,5 @@ class HomePage(TemplateView):
         context['season'] = season
         context['todays_games'] = season.game_set.today()
         context['tomorrows_games'] = season.game_set.tomorrow()
+        context['games'] = season.game_set.all()
         return context

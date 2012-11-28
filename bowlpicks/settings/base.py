@@ -103,7 +103,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.csrf.CsrfResponseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
@@ -156,7 +155,6 @@ AUTH_PROFILE_MODULE = "profiles.Profile"
 
 LOGIN_REDIRECT_URL = "/"
 
-CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "new_base.html" %}
 
 {% block subtitle %}
     Bowlpicks
@@ -7,56 +7,137 @@
 {% block extended_css %}
 {% endblock extended_css %}
 
-{% block content %}
-  <div class="row">
-    <div class="span15">
-      <h2>Today's Games</h2>
-      <hr/>
-      <div class="row">
-        <div class="span15">
-        {% if todays_games %}
-          {% for game in todays_games %}
-            <div class="game-title">
-              <h3>{{ game.name }} <small>{{ game.date|date:"g:i a" }} {{ game.get_timezome_display }} on {{ game.channel }}</small></h3>
-            </div>
-            <div class="row">
-                <div class="span5" id="home-team">
-                  <p><small>
-                    {% if home_team.rank %}
-                      ({{ game.home_team.rank }})
-                    {% endif %}
-                    </small> <strong>{{ game.home_team.school.abbr }}</strong> ({{ game.home_team.record }})</br>
-                  <small>{{ game.home_team.school.conference }}</small></p>
-                  <p>{% if game.winner_home %}&#x2605; {% endif %}<strong>{{ game.home_picks.count }}</strong> Picks</p>
+
+{% block container %}
+    <div class="container-fluid">
+      <div class="row-fluid">
+        {% block leaderboard %}
+          <div class="span3">
+            <div class="well sidebar-nav">
+              <ul class="nav nav-list">
+                <li class="nav-header">Leaderboard</li>
+                <ol>
+                  {% for points, player in season.leaders %}
+                    <li>{{ player }} <strong>({{ points }})</strong></li>
+                  {% endfor %}
+                </ol>
+              </ul>
+            </div><!--/.well -->
+          </div><!--/span-->
+        {% endblock leaderboard %}
+
+
+        <div class="span9">
+          <div class="hero-unit">
+            {% if todays_games %}
+              {% for game in todays_games %}
+                <div class="game-title">
+                  <h3>{{ game.name }} <small>{{ game.date|date:"g:i a" }} {{ game.get_timezome_display }} on {{ game.channel }}</small></h3>
                 </div>
-                <div class="span2">
-                  <h3>VS</h3>
-                </div>
-                <div class="span5" id="away-team">
-                  <p><small>
+                <div class="row">
+                  <div class="span5" id="home-team">
+                    <p><small>
+                      {% if home_team.rank %}
+                        ({{ game.home_team.rank }})
+                      {% endif %}
+                      </small> <strong>{{ game.home_team.school.abbr }}</strong> ({{ game.home_team.record }})</br>
+                      <small>{{ game.home_team.school.conference }}</small></p>
+                      <p>{% if game.winner_home %}&#x2605; {% endif %}<strong>{{ game.home_picks.count }}</strong> Picks</p>
+                  </div>
+                  <div class="span2">
+                    <h3>VS</h3>
+                  </div>
+                  <div class="span5" id="away-team">
+                    <p><small>
                     {% if away_team.rank %}
                       ({{ game.away_team.rank }})
                     {% endif %}
                     </small> <strong>{{ game.away_team.school.abbr }}</strong> ({{ game.away_team.record }})</br>
-                  <small>{{ game.away_team.school.conference }}</small></p>
-                  <p>{% if game.winner_away %}&#x2605; {% endif %}<strong>{{ game.away_picks.count }}</strong> Picks</p>
+                    <small>{{ game.away_team.school.conference }}</small></p>
+                    <p>{% if game.winner_away %}&#x2605; {% endif %}<strong>{{ game.away_picks.count }}</strong> Picks</p>
+                  </div>
                 </div>
-              </div>
-          {% endfor %}
-        {% else %}
-        <h2>No games today! :(</h2>
-        {% endif %}
-        </div>
-      </div>
-    </div> <!-- end span12 -->
+              {% endfor %}
+            {% else %}
+              <h2>No games today! :(</h2>
+            {% endif %}
+          </div>
 
-    <div class="span3">
-      <h3>Leaderboard</h3>
-      <ol>
-        {% for points, player in season.leaders %}
-          <li>{{ player }} <strong>({{ points }})</strong></li>
-        {% endfor %}
-      </ol>
-    </div> <!-- end span -->
-  </div><!-- end row -->
-{% endblock content %}
+          {% for game in games %}
+          <div class="row-fluid">
+            <div class="page-header">
+              <h2>{{ game.name }} <small>{{ game.date|date:"g:i a" }} {{ game.get_timezome_display }} on {{ game.channel }}</small></h2>
+            </div>
+
+            <div class="span3">
+              <p><small>
+                {% if home_team.rank %}
+                  ({{ game.home_team.rank }})
+                {% endif %}
+                </small>
+                <strong>{{ game.home_team.school.abbr }}</strong>
+                ({{ game.home_team.record }})</br>
+                <small>{{ game.home_team.school.conference }}</small>
+              </p>
+              <p>{% if game.winner_home %}&#x2605; {% endif %}<strong>{{ game.home_picks.count }}</strong> Picks</p>
+            </div>
+
+            <div class="span2">
+              <div style="font-size: 100px;">
+                <span class="chartwell pies">
+                  <span style="color: #48eacf">45</span>
+                  <span style="color: #82cff2">20</span>
+                  <span class="segment03">14</span>
+                  <span style="color: #bdb1dd">7</span>
+                  <span style="color: #be8ecc">14</span>
+                  <span style="color: #fff">A</span> <!-- medium sized white centre piece -->
+                </span>
+              </div>
+            </div>
+
+            <div class="span1">
+              <h3>VS</h3>
+            </div>
+
+            <div class="span3">
+              <p><small>
+                {% if away_team.rank %}
+                  ({{ game.away_team.rank }})
+                {% endif %}
+                </small>
+                <strong>{{ game.away_team.school.abbr }}</strong>
+                ({{ game.away_team.record }})</br>
+                <small>{{ game.away_team.school.conference }}</small>
+              </p>
+              <p>{% if game.winner_away %}&#x2605; {% endif %}<strong>{{ game.away_picks.count }}</strong> Picks</p>
+            </div>
+
+            <div class="span2">
+              <div style="font-size: 100px;">
+                <span class="chartwell pies">
+                  <span style="color: #48eacf">45</span>
+                  <span style="color: #82cff2">20</span>
+                  <span class="segment03">14</span>
+                  <span style="color: #bdb1dd">7</span>
+                  <span style="color: #be8ecc">14</span>
+                  <span style="color: #fff">A</span> <!-- medium sized white centre piece -->
+                </span>
+              </div>
+            </div>
+
+          </div>
+          {% endfor %}
+
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+  {% endblock container %}
+
+
