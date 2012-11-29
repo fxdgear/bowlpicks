@@ -1,11 +1,15 @@
-{% extends "base.html" %}
+{% extends "new_base.html" %}
 
-{% block nav %}
-  <li><a href="{% url homepage %}">Home</a></li>
-  <li><a href="{% url pick_list %}">Pick List</a></li>
-  {% ifequal flatpage.url "/help/" %}
-    <li class="active"><a href="/help/">Help</a></li>
-  {% else %}
-    <li><a href="/help/">Help</a></li>
-  {% endifequal %}
-{% endblock nav %}
+
+{% block container %}
+  <div class="container">
+    {% block content %}{% endblock content %}
+    <hr>
+    {% block footer %}
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+    {% endblock footer %}
+  </div><!--/.fluid-container-->
+{% endblock container %}
+

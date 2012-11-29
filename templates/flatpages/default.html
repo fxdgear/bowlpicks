@@ -2,13 +2,14 @@
 {% load markup %}
 
 {% block content %}
-  <div class="hero-unit">
-    <div class="row">
-      <div class="span12">
-        <h1>{{ flatpage.title }}</h1>
-        <hr>
-        {{ flatpage.content|markdown }}
-      </div>
-    </div>
+<div class="row">
+  <div class="page-header">
+    <h1>{{ flatpage.title }}</h1>
   </div>
-{% endblock content %}
+</div>
+<div class="row">
+  <div class="span12">
+    {{ flatpage.content|markdown }}
+  </div>
+</div>
+{% endblock %}
