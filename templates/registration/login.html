@@ -1,21 +1,19 @@
 {% extends "registration/base_registration.html" %}
 
 
-{% block title %}Log in{% endblock %}
-{% block body_class %}{{ block.super }} login_form{% endblock %}
-
-
-{% block content_title %}
-  <h2>Log in</h2>
-{% endblock %}
-
-
 {% block content %}
-  <div class="hero-unit">
+<div class="row">
+  <div class="page-header">
+    <h1>Log in</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="span5">
     <form action="." method="post" class="login_form">{% csrf_token %}
     {{ form.as_p }}
     <p class="submit"><button class="btn primary" type="submit" name="submit" value="Login">Log in</button></p>
     {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
     </form>
   </div>
+</div>
 {% endblock %}

@@ -1,24 +1,82 @@
 
 {% if forloop.last %}
-  <div class="well">
-    <h3>Tie Breaker</h3>
-    <p>
-      <a class="btn btn-small{% if pick.winner == pick.game.home_team %} active{% endif %}"
-      onClick="upDatePick({{pick.game.pk}}, {{pick.game.home_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.home_team.school.abbr}} <small>({{ pick.game.home_team.record }})</small></a>
-      vs.
-      <a class="btn btn-small{% if pick.winner == pick.game.away_team %} active{% endif %}" onClick="upDatePick({{pick.game.pk}}, {{pick.game.away_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.away_team.school.abbr}} <small>({{ pick.game.away_team.record }})</small></a>
-    </p>
-      <form>
-        <input class="span1 tie-breaker" id="{{ player.pk }}_home_score" name="{{ player.pk }}_home_score" type="text" {% if pick.home_score %}value="{{ pick.home_score }}"{% endif %}>
-        -
-        <input class="span1 tie-breaker" id="{{ player.pk }}_away_score" name="{{ player.pk }}_away_score" type="text" {% if pick.away_score %}value="{{ pick.away_score }}"{% endif %}>
-      </form>
+  <div class="page-header">
+    <h4>{{ pick.game.name }}</h4>
   </div>
-{% else %}
-    <p>
+  <div class="row pick-row" id="{{pick.game.pk}}">
+    <div class="span2">
       <a class="btn btn-small{% if pick.winner == pick.game.home_team %} active{% endif %}"
-      onClick="upDatePick({{pick.game.pk}}, {{pick.game.home_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.home_team.school.abbr}} <small>({{ pick.game.home_team.record }})</small></a>
-      vs.
-      <a class="btn btn-small{% if pick.winner == pick.game.away_team %} active{% endif %}" onClick="upDatePick({{pick.game.pk}}, {{pick.game.away_team.pk}}, {{player.pk}}, (this));" >{{ pick.game.away_team.school.abbr}} <small>({{ pick.game.away_team.record }})</small></a>
-    </p>
+         id="{{pick.game.home_team.pk}}"
+         style="color: {{ pick.game.home_team.school.color}}" >
+        <strong>{{ pick.game.home_team.school.abbr}} <small>({{ pick.game.home_team.record }})</small></strong>
+      </a>
+    </div>
+    <div class="span">
+      <div style="font-size: 50px;">
+        <span class="chartwell pies">
+          <span style="color: {{ pick.game.away_team.school.color }}">{{ pick.game.away_percent }}</span>
+          <span style="color: {{ pick.game.home_team.school.color }}">{{ pick.game.home_percent }}</span>
+          <span style="color: #fff">A</span> <!-- medium sized white centre piece -->
+        </span>
+      </div>
+    </div>
+    <div class="span2 pull-right">
+      <a class="btn btn-small{% if pick.winner == pick.game.away_team %} active{% endif %}"
+         id="{{pick.game.away_team.pk}}"
+         style="color: {{ pick.game.away_team.school.color}}" >
+         <strong>{{ pick.game.away_team.school.abbr}} <small>({{ pick.game.away_team.record }})</small></strong>
+       </a>
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <div class="span4 well">
+      <form class="form-horizontal">
+        <div class="control-group">
+          <label class="control-label" for="{{ player.pk }}_home_score">{{ pick.game.home_team.school.abbr }}</label>
+          <div class="controls">
+            <input class="span1 tie-breaker" id="{{ player.pk }}_home_score" name="{{ player.pk }}_home_score" type="text" {% if pick.home_score %}value="{{ pick.home_score }}"{% endif %}>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="{{ player.pk }}_away_score">{{ pick.game.away_team.school.abbr }}</label>
+          <div class="controls">
+            <input class="span1 tie-breaker" id="{{ player.pk }}_away_score" name="{{ player.pk }}_away_score" type="text" {% if pick.away_score %}value="{{ pick.away_score }}"{% endif %}>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% else %}
+  <div class="page-header">
+    <h4>{{ pick.game.name }}</h4>
+  </div>
+  <div class="row pick-row" id="{{pick.game.pk}}">
+
+    <div class="span2">
+      <a class="btn btn-small{% if pick.winner == pick.game.home_team %} active{% endif %}"
+         id="{{pick.game.home_team.pk}}"
+         style="color: {{ pick.game.home_team.school.color}}" >
+          <strong>{{ pick.game.home_team.school.abbr}} <small>({{ pick.game.home_team.record }})</small></strong>
+      </a>
+    </div>
+    <div class="span">
+      <div style="font-size: 50px;">
+        <span class="chartwell pies">
+          <span style="color: {{ pick.game.away_team.school.color }}">{{ pick.game.away_percent }}</span>
+          <span style="color: {{ pick.game.home_team.school.color }}">{{ pick.game.home_percent }}</span>
+          <span style="color: #fff">A</span> <!-- medium sized white centre piece -->
+        </span>
+      </div>
+    </div>
+    <div class="span2 pull-right">
+      <a class="btn btn-{{ pick.game.away_team.school.abbr }} btn-small{% if pick.winner == pick.game.away_team %} active{% endif %}"
+         id="{{pick.game.away_team.pk}}"
+         style="color: {{ pick.game.away_team.school.color}}" >
+         <strong>{{ pick.game.away_team.school.abbr}} <small>({{ pick.game.away_team.record }})</small></strong>
+       </a>
+    </div>
+  </div>
+
 {% endif %}

@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Le styles -->
+    {% block css %}
     <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
@@ -28,6 +29,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
       <script src="excanvas.min.js"></script>
     <![endif]-->
+    {% block extened_css %}{% endblock extened_css %}
+    {% endblock css %}
 
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="../assets/ico/favicon.ico">
@@ -87,6 +90,7 @@
   {% block container %}
   {% endblock container %}
 
+  {% block js %}
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -111,12 +115,14 @@
     <script src="{{ STATIC_URL }}js/chartwell_pies.min.js"></script>
     <script src="{{ STATIC_URL }}js/chartwell_radar.min.js"></script>
     <script src="{{ STATIC_URL }}js/chartwell_rings.min.js"></script>
-    <script src="{{ STATIC_URL }}js/hartwell_rose.min.js"></script>
+    <script src="{{ STATIC_URL }}js/chartwell_rose.min.js"></script>
     <script>
       $(document).ready(function(){
         FFChartwell()
       })
     </script>
+    {% block extended_js %}{% endblock extended_js %}
+  {% endblock js %}
 
   </body>
 </html>
