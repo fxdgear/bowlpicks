@@ -80,7 +80,8 @@
             </div>
 
             <div class="span3">
-              <p><small>
+              <p>{% if game.home_score %}<span class="badge  {% if game.winner == game.home_team %}badge-success{% endif %}">{{ game.home_score }}</span>{% endif %}
+                <small>
                 {% if home_team.rank %}
                   ({{ game.home_team.rank }})
                 {% endif %}
@@ -98,8 +99,9 @@
             </div>
 
             <div class="span3">
-              <p><small>
-                {% if away_team.rank %}
+              <p>{% if game.away_score %}<span class="badge {% if game.winner == game.away_team %}badge-success{% endif %}">{{ game.away_score }}</span>{% endif %}
+                <small>
+                {% if game.away_team.rank %}
                   ({{ game.away_team.rank }})
                 {% endif %}
                 </small>
