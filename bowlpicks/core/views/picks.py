@@ -26,7 +26,7 @@ def create_pick(request, *args, **kwargs):
         if not request.user.is_staff:
             return HttpResponseForbidden()
         else:
-           player = Player.objects.get(pk=player_id)
+            player = Player.objects.get(pk=player_id)
 
     if request.is_ajax and request.method == "GET":
         game = Game.objects.get(pk=game_id)
