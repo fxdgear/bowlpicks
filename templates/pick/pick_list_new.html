@@ -72,7 +72,7 @@
 {% endblock css %}
 
 {% block container %}
-  <div class="container" style="width:">
+  <div class="container">
     {% block content %}
       {% for player, picks in players %}
         <div class="row pick-row">
@@ -110,27 +110,3 @@
     {% endblock footer %}
   </div><!--/.fluid-container-->
 {% endblock container %}
-
-{% comment %}
-{% block content %}
-  <div class="row pick-list">
-    {% for player, picks in players %}
-      <article>
-        <header><h4>{{ player }}</h4></header>
-        {% for pick in picks %}
-          <div class="circle {% if pick.correct %}win{% else %}lose{% endif %}" id="game-{{ pick.game.pk }}"
-            data-original-title="{{ pick.game.name }}"
-            data-content="
-              <p style='margin-right:20px'>{{ pick.game.short_name }}</p>
-              <p><strong>Picked:</strong> {{ pick.winner.school.abbr }}
-              {% if pick.game.winner.school %}
-                <strong>Winner:</strong>{{ pick.game.winner.school.abbr }}
-              {% endif %}">{{ pick.game }}</div>
-
-        {% endfor %}
-        <div class="score"><p><strong>{{ player.points }}</strong>/{{ player.wrong }}</p></div>
-      </article>
-    {% endfor %}
-  </div>
-{% endblock content %}
-{% endcomment %}

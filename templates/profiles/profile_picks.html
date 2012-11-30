@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends "profiles/profile_base.html" %}
 
-{% block extended_css %}
+{% block css %}
+  {{ block.super }}
   <style>
    .choice {
       font-size:13px;
@@ -41,8 +42,12 @@
       text-decoration:none;
       cursor:pointer;
     }
+    .pick-row {
+      margin-top:40px;
+      margin-left:10px;
+    }
   </style>
-{% endblock extended_css %}
+{% endblock css %}
 
 {% block extended_js %}
   <script>
@@ -102,30 +107,49 @@
   </script>
 {% endblock extended_js %}
 
-{% block subtitle %}
-    {{ profile }} picks
-{% endblock subtitle %}
 
-{% block header %}
-  <div class="page-header">
-    <h2>My Picks</h2>
-    <p>Click on a team name to make your selection.</br>
-    <small>Any questions contact <a href="mailto:nick@nicklang.com">Nick</a></small></p>
+{% block container %}
+  <div class="container">
+     <div class="page-header">
+      <h1>My Picks</h1>
+    </div>
+    {% block content %}
+      {% for player in profile.player_set.all %}
+        <div class="row pick-row">
+          <div class="span2">
+            <h4>{{ player }}</h4>
+          </div>
+          <div class="span8">
+            {% for pick in player.pick_set.curent_season %}
+              <span class="badge {% if pick.correct %}badge-success{% endif %}"
+                    id="game-{{ pick.game.pk }}"
+                    data-original-title="{{ pick.game.name }}"
+                    rel="popover"
+                    data-content="
+                  <p>{{ pick.game.short_name }}</p>
+                  <p><strong>Picked:</strong> {{ pick.winner.school.abbr }}
+                  {% if pick.game.winner.school %}
+                    <br><strong>Winner:</strong>{{ pick.game.winner.school.abbr }}
+                  {% endif %}">{% if pick.correct %}<i class="icon-ok"></i>{% else %}<i class="icon-remove"></i>{% endif %}
+                </span>
+            {% endfor %}
+          </div>
+          <div class="span1 pull-right">
+            <h4>{{ player.points }}/<small>{{ player.wrong }}</small></h4>
+          </div>
+        </div>
+      {% endfor %}
+    {% endblock content %}
+  <hr>
+  {% block footer %}
+    <footer>
+      <p>&copy; Company 2012</p>
+    </footer>
+  {% endblock footer %}
+  </div><!--/.fluid-container-->
+{% endblock container %}
 
-    {% if profile.current_season.is_froze %}
-      <div class="alert-message error fade in" data-alert="alert">
-        <a class="close" href="#">×</a>
-        <p><strong>Game Time!</strong> Picks are now frozen.</p>
-      </div>
-    {% else %}
-      <div class="alert-message info fade in" data-alert="alert">
-        <a class="close" href="#">×</a>
-        <p><strong>Heads Up!</strong> Picks will be frozen on {{ profile.current_season.freeze_date }}</p>
-      </div>
-    {% endif %}
-  </div>
-
-{% endblock header %}
+{% comment %}
 
 {% block content %}
   <div class="row">
@@ -139,3 +163,5 @@
     {% endfor %}
   </div>
 {% endblock content %}
+{% endcomment %}
+
