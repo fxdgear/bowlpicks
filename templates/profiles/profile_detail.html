@@ -46,7 +46,7 @@
             <tbody>
               {% for player in profile.player_set.all %}
                 <tr>
-                  <td>1</t3>
+                  <td>{{ player.rank }}</t3>
                   <td><a href="{% url pick_detail player.pk %}"><strong>{{ player }}</strong></a></td>
                   <td>{{ player.points }}</td>
                   <td>{{ player.wrong }}</td>

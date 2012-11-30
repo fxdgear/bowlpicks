@@ -48,11 +48,29 @@ class Player(models.Model):
                 count += 1
         return count
 
+    def rank(self):
+        rankings = PlayerRanking.objects.current_season()
+        count = 0
+        for rank in rankings:
+            count += 1
+            if rank.player == self:
+                return count
+        return 'N/A'
+
+
+class PlayerRankingManager(models.Manager):
+
+    def current_season(self):
+        model = models.get_model('core', 'Season')
+        return self.filter(season=model.objects.current())
+
 class PlayerRanking(models.Model):
     season = models.ForeignKey('core.Season')
     player = models.ForeignKey(Player)
     correct = models.IntegerField(null=True)
     wrong = models.IntegerField(null=True)
+
+    objects = PlayerRankingManager()
 
     class Meta:
         ordering = ('-correct', )

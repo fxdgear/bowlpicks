@@ -163,19 +163,4 @@
   </div><!--/.fluid-container-->
 {% endblock container %}
 
-{% comment %}
-
-{% block content %}
-  <div class="row">
-    {% for player in profile.player_set.all %}
-       <div class="span">
-          <h3>{{ player }}</h3>
-          {% for pick in player.pick_set.curent_season %}
-            {% include "pick/pick_picklist.html" %}
-          {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
-{% endblock content %}
-{% endcomment %}
 
