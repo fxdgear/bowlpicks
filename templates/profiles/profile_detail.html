@@ -1,5 +1,6 @@
 {% extends "profiles/profile_base.html" %}
 
+
 {% block extended_css %}
   <style>
     .add-player {
@@ -47,8 +48,8 @@
                 <tr>
                   <td>1</t3>
                   <td><a href="{% url pick_detail player.pk %}"><strong>{{ player }}</strong></a></td>
-                  <td>5</td>
-                  <td>10</td>
+                  <td>{{ player.points }}</td>
+                  <td>{{ player.wrong }}</td>
                   <td><a class="btn btn-mini btn-danger" href="{% url bowlpicks_delete_player player.pk %}">Delete</a></td>
                 </tr>
               {% endfor %}

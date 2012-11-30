@@ -47,3 +47,12 @@ class Player(models.Model):
             if not p.correct:
                 count += 1
         return count
+
+class PlayerRanking(models.Model):
+    season = models.ForeignKey('core.Season')
+    player = models.ForeignKey(Player)
+    correct = models.IntegerField(null=True)
+    wrong = models.IntegerField(null=True)
+
+    class Meta:
+        ordering = ('-correct', )

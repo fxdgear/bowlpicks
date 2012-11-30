@@ -9,7 +9,7 @@ from django.views.generic.edit import ProcessFormView
 from django.views.generic.base import View
 
 from bowlpicks.core.models import Season, Game, Team, Pick
-from bowlpicks.profiles.models import Player
+from bowlpicks.profiles.models import Player, PlayerRanking
 from bowlpicks.core.forms import PickForm, PlayerForm
 
 
@@ -38,24 +38,14 @@ def create_pick(request, *args, **kwargs):
         return HttpResponse(status=200)
 
 
-@cache_page(60 * 15)
 def pick_list(request, *args, **kwargs):
     template_name = kwargs.pop('template', "pick/pick_list_new.html")
-    season = Season.objects.filter(current=True)[0]
-    games = season.game_set.all().order_by('date')
-    player_list = Player.objects.filter(active=True).select_related()
-
-    # create a list of tuples (player, player_picks) where player picks are odered
-    # by game date to match the list of games above.
-    players = [(p, p.pick_set.curent_season().order_by('game__date')) for p in player_list]
-
-    # sort list by top scoring players
-    players = sorted(players, key=lambda player: player[0].points, reverse=True)
+    season = Season.objects.current()
+    rankings = PlayerRanking.objects.filter(season=season)
 
     return render_to_response(template_name, {
-        'games': games,
+        'rankings': rankings,
         'season': season,
-        'players': players
     }, context_instance=RequestContext(request))
 
 

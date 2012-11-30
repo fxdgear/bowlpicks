@@ -1,5 +1,19 @@
 {% extends "profiles/profile_base.html" %}
 
+
+{% block js %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.badge').popover({
+          html: true,
+          placement: 'right',
+          trigger: 'hover',
+        });
+    })
+  </script>
+{% endblock js %}
+
 {% block css %}
   {{ block.super }}
   <style>

@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from django.db.models.signals import post_save
 import urllib2
 
-from bowlpicks.profiles.models import Player
+from bowlpicks.profiles.models import Player, PlayerRanking
 from bowlpicks.core.utils import expire_view_cache
 
 
@@ -26,9 +26,8 @@ class Season(models.Model):
         return u"%s-%s" % (self.year_start, self.year_end)
 
     def leaders(self):
-        players = sorted([(x.points, x) for x in Player.objects.all()])
-        players.reverse()
-        return players[:10]
+        return PlayerRanking.objects.filter(season=self)[:10]
+
 
     def get_picks(self):
         return Pick.objects.filter(game__season=self)
@@ -56,7 +55,7 @@ class School(models.Model):
     color = models.CharField(max_length=15, blank=True, null=True)
 
     class Meta:
-        ordering = ['name',]
+        ordering = ['name', ]
 
     def __unicode__(self):
         return u"%s %s" % (self.name, self.mascot)
@@ -116,6 +115,9 @@ class Game(models.Model):
     require_tie_breaker = models.BooleanField(default=False)
 
     objects = GameManger()
+
+    class Meta:
+        ordering = ['date',]
 
     def __unicode__(self):
         return u"(%s) %s" % (self.season, self.name)
@@ -193,7 +195,15 @@ def pick_post_save(sender, instance, signal, *args, **kwargs):
 
 
 def game_post_save(sender, instance, signal, *args, **kwargs):
-    expire_view_cache("pick_list")
+    season = Season.objects.current()
+    for player in Player.objects.all():
+        rank, created = PlayerRanking.objects.get_or_create(
+            season=season,
+            player=player)
+
+        rank.correct = player.points
+        rank.wrong = player.wrong
+        rank.save()
 
 
 post_save.connect(pick_post_save, sender=Pick)

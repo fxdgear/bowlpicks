@@ -74,13 +74,13 @@
 {% block container %}
   <div class="container">
     {% block content %}
-      {% for player, picks in players %}
+      {% for rank in rankings %}
         <div class="row pick-row">
           <div class="span2">
-            <h4>{{ player }}</h4>
+            <h4>{{ rank.player }}</h4>
           </div>
           <div class="span8">
-            {% for pick in picks %}
+            {% for pick in rank.player.pick_set.curent_season %}
               <span class="badge {% if pick.correct %}badge-success{% endif %}"
                     id="game-{{ pick.game.pk }}"
                     data-original-title="{{ pick.game.name }}"
@@ -95,11 +95,10 @@
             {% endfor %}
           </div>
           <div class="span1 pull-right">
-            <h4>{{ player.points }}/<small>{{ player.wrong }}</small></h4>
+            <h4>{{ rank.player.points }}/<small>{{ rank.player.wrong }}</small></h4>
           </div>
         </div>
         {% endfor %}
-      </div>
     {% endblock content %}
 
     <hr>
