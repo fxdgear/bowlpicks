@@ -86,7 +86,7 @@
                     data-original-title="{{ pick.game.name }}"
                     rel="popover"
                     data-content="
-                  <p>{{ pick.game.short_name }}</p>
+                  <p>{{ pick.game.home_team.school.abbr }}{% if pick.game.home_score %}({{ pick.game.home_score }}){% endif %} vs. {{ pick.game.away_team.school.abbr }}{% if pick.game.away_score %}({{ pick.game.away_score }}){% endif %}</p>
                   <p><strong>Picked:</strong> {{ pick.winner.school.abbr }}
                   {% if pick.game.winner.school %}
                     <br><strong>Winner:</strong>{{ pick.game.winner.school.abbr }}
