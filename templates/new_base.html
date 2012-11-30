@@ -66,7 +66,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.get_profile }} <b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="{% url bowlpicks_profile_detail user.get_profile.pk %}"><i class="icon-user"></i> Profile</a></li>
-                    <li><a href="{% url profile_picks user.get_profile.pk %}"><i class="icon-pencil"></i> My Picks</a></li>
+                    <li><a href="{% url profile_picks user.get_profile.pk %}"><i class="icon-check"></i> My Picks</a></li>
                     <li class="divider"></li>
                     {% if user.is_staff %}
                       <li><a href="{% url email_everyone %}">Email Everyone</a></li>
