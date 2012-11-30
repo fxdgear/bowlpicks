@@ -48,8 +48,11 @@ class Player(models.Model):
                 count += 1
         return count
 
-    def rank(self):
-        rankings = PlayerRanking.objects.current_season()
+    def rank(self, season=None):
+        if season is None:
+            rankings = PlayerRanking.objects.current_season()
+        else:
+            rankings = PlayerRanking.objects.filter(season=season)
         count = 0
         for rank in rankings:
             count += 1
