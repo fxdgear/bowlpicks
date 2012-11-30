@@ -11,7 +11,7 @@
 
     <!-- Le styles -->
     {% block css %}
-    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -21,7 +21,6 @@
         padding: 9px 0;
       }
     </style>
-    <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -52,35 +51,31 @@
           </a>
           <a class="brand" href="{% url homepage %}">Bowlpicks</a>
           <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              {% if user.is_anonymous %}
-                <li><a href="{% url auth_login %}">Log in</a></li>
-                  <li class="divider-vertical"></li>
-                  <li><a href="{% url registration_register %}">Register</a></li>
-              {% else %}
-                <li class="menu">
-                  <li class="divider-vertical"></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.get_profile }} <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="{% url bowlpicks_profile_detail user.get_profile.pk %}"><i class="icon-user"></i> Profile</a></li>
-                      <li><a href="{% url profile_picks user.get_profile.pk %}"><i class="icon-pencil"></i> My Picks</a></li>
-                      <li class="divider"></li>
-                      {% if user.is_staff %}
-                        <li><a href="{% url email_everyone %}">Email Everyone</a></li>
-                        <li class="divider"></li>
-                      {% endif %}
-                      <li><a href="{% url auth_logout %}"><i class="icon-off"></i> Log out</a></li>
-                    </ul>
-                  </li>
-                </li>
-              {% endif %}
-            </ul>
-
             <ul class="nav">
               <li class="active"><a href="{% url homepage %}">Home</a></li>
               <li><a href="{% url pick_list %}">Pick List</a></li>
               <li><a href="/help/">Help</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              {% if user.is_anonymous %}
+                <li><a href="{% url auth_login %}">Log in</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="{% url registration_register %}">Register</a></li>
+              {% else %}
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.get_profile }} <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{% url bowlpicks_profile_detail user.get_profile.pk %}"><i class="icon-user"></i> Profile</a></li>
+                    <li><a href="{% url profile_picks user.get_profile.pk %}"><i class="icon-pencil"></i> My Picks</a></li>
+                    <li class="divider"></li>
+                    {% if user.is_staff %}
+                      <li><a href="{% url email_everyone %}">Email Everyone</a></li>
+                      <li class="divider"></li>
+                    {% endif %}
+                    <li><a href="{% url auth_logout %}"><i class="icon-off"></i> Log out</a></li>
+                  </ul>
+                </li>
+              {% endif %}
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -95,18 +90,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ STATIC_URL }}js/jquery.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-transition.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-alert.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-dropdown.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-scrollspy.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-tab.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-tooltip.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-popover.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-button.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-carousel.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
 
     <script src="{{ STATIC_URL }}js/chartwell.min.js"></script>
     <script src="{{ STATIC_URL }}js/chartwell_bars.min.js"></script>
