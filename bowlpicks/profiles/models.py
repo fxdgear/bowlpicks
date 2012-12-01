@@ -28,6 +28,7 @@ class Player(models.Model):
     name = models.CharField(max_length=100, unique=True)
     paid = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
+    season = models.ManyToManyField('core.Season')
 
     def __unicode__(self):
         return u"%s" % self.name
@@ -59,6 +60,14 @@ class Player(models.Model):
             if rank.player == self:
                 return count
         return 'N/A'
+
+    def current_active(self):
+        model = models.get_model('core', 'Season')
+        return self.active and self.season == model.objects.current()
+
+    def current_player(self):
+        model = models.get_model('core', 'Season')
+        return model.objects.current() in self.season.all()
 
 
 class PlayerRankingManager(models.Manager):

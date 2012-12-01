@@ -99,14 +99,12 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
 ROOT_URLCONF = 'bowlpicks.urls'
@@ -155,11 +153,6 @@ AUTH_PROFILE_MODULE = "profiles.Profile"
 
 LOGIN_REDIRECT_URL = "/"
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
-}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -184,10 +177,3 @@ LOGGING = {
     }
 }
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_PASSWORD = "tiw82zaf"
-EMAIL_HOST_USER = "nick@nicklang.com"
-EMAIL_PORT = 587
-EMAIL_SUBJECT_PREFIX = "[Bowl Picks] "
-EMAIL_USE_TLS = True
-SERVER_EMAIL = "nick@nicklang.com"

@@ -5,4 +5,4 @@ from bowlpicks.profiles.models import Player
 class PlayerForm(forms.ModelForm):
     class Meta:
         model = Player
-        exclude = ('profile', )
+        exclude = ('profile', 'season', )

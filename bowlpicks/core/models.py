@@ -6,7 +6,6 @@ from django.db.models.signals import post_save
 import urllib2
 
 from bowlpicks.profiles.models import Player, PlayerRanking
-from bowlpicks.core.utils import expire_view_cache
 
 
 class SeasonManager(models.Manager):
@@ -194,10 +193,7 @@ class Pick(models.Model):
 def pick_post_save(sender, instance, signal, *args, **kwargs):
     pick = instance
     player = pick.player
-    if not player.active:
-        player.active = True
-        player.save()
-    expire_view_cache("pick_list")
+
 
 
 def game_post_save(sender, instance, signal, *args, **kwargs):

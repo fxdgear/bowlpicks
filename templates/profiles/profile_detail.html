@@ -28,7 +28,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span5">
+    <div class="span7">
       <h3>My Players</h3>
         {% if not profile.player_set.all %}
           <p>You have no players, please create one now!</p>
@@ -40,6 +40,9 @@
                 <th>Player Name</th>
                 <th>Correct Picks</th>
                 <th>Incorrect</th>
+                <th>Paid</th>
+                <th>Seasons</th>
+                <th>Current Player</th>
                 <th>&nbsp;</th>
               </tr>
             </thead>
@@ -50,6 +53,19 @@
                   <td><a href="{% url pick_detail player.pk %}"><strong>{{ player }}</strong></a></td>
                   <td>{{ player.points }}</td>
                   <td>{{ player.wrong }}</td>
+                  <td>{% if player.active %}
+                      <span class="label label-success">PAID</span>
+                    {% else %}
+                      <span class="label label-inverse">Not Paid</span>
+                    {% endif %}
+                  </td>
+                  <td>{% for season in player.season.all %}{{ season }}<br>{% endfor %}</td>
+                  <td>{% if player.current_player %}
+                        <span class="label label-success">True</span>
+                      {% else %}
+                        <a href="{% url bowlpicks_make_player_current player_id=player.pk %}" class="btn btn-mini btn-primary">Use this season</a>
+                      {% endif %}
+                  </td>
                   <td><a class="btn btn-mini btn-danger" href="{% url bowlpicks_delete_player player.pk %}">Delete</a></td>
                 </tr>
               {% endfor %}
@@ -58,15 +74,20 @@
         {% endif %}
     </div>
 
-    <div class="span offset2 add-player">
+    <div class="span offset1 add-player">
       <form method="post" action="{% url bowlpicks_profile_detail profile.pk%}">
         {% csrf_token %}
         <fieldset>
+          {% if form.errors %}
+              {% for field, error in form.errors.items %}
+                <span class="help-text" style="color:red">{{ error }}</span>
+              {% endfor %}
+              {% endif %}
           <legend>Add a new player</legend>
           <div class="clearfix">
             <label for="id_name">Player Name: </label>
             <div class="input-append">
-              <input class="span2" id="id_namee" name="name" type="text">
+              {{ form.name }}
               <input type="submit" class="btn btn-primary" value="Create Player">
             </div>
           </div>
