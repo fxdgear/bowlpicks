@@ -117,7 +117,7 @@ class Game(models.Model):
     objects = GameManger()
 
     class Meta:
-        ordering = ['date',]
+        ordering = ['date', ]
 
     def __unicode__(self):
         return u"(%s) %s" % (self.season, self.name)
@@ -133,11 +133,17 @@ class Game(models.Model):
         return self.pick_set.filter(winner=self.away_team)
 
     def away_percent(self):
-        value = (float(self.away_picks().count()) / float(self.pick_set.count())) * 100
+        try:
+            value = (float(self.away_picks().count()) / float(self.pick_set.count())) * 100
+        except ZeroDivisionError:
+            value = 0
         return int(value)
 
     def home_percent(self):
-        value = (float(self.home_picks().count()) / float(self.pick_set.count())) * 100
+        try:
+            value = (float(self.home_picks().count()) / float(self.pick_set.count())) * 100
+        except ZeroDivisionError:
+            value = 0
         return int(value)
 
     @property

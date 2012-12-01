@@ -1,0 +1,1091 @@
+[
+    {
+        "pk": 21, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "color": "#5D8AA8", 
+            "mascot": "Falcons", 
+            "name": "Air Force Academy", 
+            "abbr": "Air Force"
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#990033", 
+            "mascot": "Sun Devils", 
+            "name": "Arizona State University", 
+            "abbr": "Arizona State"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 10, 
+            "color": "#FF2400", 
+            "mascot": "Red Wolves", 
+            "name": "Arkansas State University", 
+            "abbr": "Arkansas State"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#DD550C", 
+            "mascot": "Tigers", 
+            "name": "Auburn University", 
+            "abbr": "Auburn"
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#003015", 
+            "mascot": "Bears", 
+            "name": "Baylor University", 
+            "abbr": "Baylor"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "color": "#f4793e", 
+            "mascot": "Broncos", 
+            "name": "Boise State University", 
+            "abbr": "Boise St."
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#790024", 
+            "mascot": "Eagles", 
+            "name": "Boston College", 
+            "abbr": "Boston Col"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "color": "#002E5D", 
+            "mascot": "Cougars", 
+            "name": "Bringham Young University", 
+            "abbr": "BYU"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#F66733", 
+            "mascot": "Tigers", 
+            "name": "Clemson University", 
+            "abbr": "Clemson"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#592A8A", 
+            "mascot": "Pirates", 
+            "name": "East Carolina University", 
+            "abbr": "East Carolina"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 10, 
+            "color": "#002d62", 
+            "mascot": "Golden Panthers", 
+            "name": "Florida International University", 
+            "abbr": "Fla International"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#540115", 
+            "mascot": "Seminoles", 
+            "name": "Florida State University", 
+            "abbr": "Fla St."
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "color": "#B40000", 
+            "mascot": "Bulldogs", 
+            "name": "Fresno State University", 
+            "abbr": "Fresno St"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#000000", 
+            "mascot": "Yellow Jackets", 
+            "name": "Georgia Tech University", 
+            "abbr": "Geo Tech"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#C41E3A", 
+            "mascot": "Cyclones", 
+            "name": "Iowa State University", 
+            "abbr": "Iowa State"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#461D7C", 
+            "mascot": "Wildcats", 
+            "name": "Kansas State University", 
+            "abbr": "Kansas St"
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "color": "#0A0D6F", 
+            "mascot": "Golden Eagles", 
+            "name": "Kent State University", 
+            "abbr": "KSU"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#461D7C", 
+            "mascot": "Tigers", 
+            "name": "Louisiana State University", 
+            "abbr": "LSU"
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "color": "#FF0000", 
+            "mascot": "Bulldogs", 
+            "name": "Louisiana Tech University", 
+            "abbr": "La Tech"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "color": "#ED1C24", 
+            "mascot": "Cardinals", 
+            "name": "Louisville University", 
+            "abbr": "Louisville"
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#275937", 
+            "mascot": "Thundering Herd", 
+            "name": "Marshall University", 
+            "abbr": "Marshall"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#18453b", 
+            "mascot": "Spartans", 
+            "name": "Michigan State University", 
+            "abbr": "Mich St."
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 10, 
+            "color": "#4169E1", 
+            "mascot": "Blue Raiders", 
+            "name": "Middle Tennessee State University", 
+            "abbr": "Middle Tennessee"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#660000", 
+            "mascot": "Bulldogs", 
+            "name": "Mississippi State University", 
+            "abbr": "Miss St."
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "color": "#000080", 
+            "mascot": "Midshipmen", 
+            "name": "Navy", 
+            "abbr": "Navy"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "color": "#CCCCCC", 
+            "mascot": "Lobos", 
+            "name": "New Mexico University", 
+            "abbr": "New Mexico"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#CC0000", 
+            "mascot": "Wolfpack", 
+            "name": "North Carolina State University", 
+            "abbr": "NC State"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "color": "#af0000", 
+            "mascot": "Huskies", 
+            "name": "Northern Illinois", 
+            "abbr": "Northern Illinois"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#520063", 
+            "mascot": "Wildcats", 
+            "name": "Northwestern University", 
+            "abbr": "Northwestern"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#990000", 
+            "mascot": "Buckeyes", 
+            "name": "Ohio State University", 
+            "abbr": "Ohio St"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#FF7700", 
+            "mascot": "Cowboys", 
+            "name": "Oklahoma State University", 
+            "abbr": "OK State"
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#d85a1a", 
+            "mascot": "Beavers", 
+            "name": "Oregon State University", 
+            "abbr": "OSU"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#000099", 
+            "mascot": "Nittany Lions", 
+            "name": "Pennsylvania State University", 
+            "abbr": "Penn St"
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#B1946C", 
+            "mascot": "Boilermakers", 
+            "name": "Purdue University", 
+            "abbr": "Purdue"
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "color": "#D21034", 
+            "mascot": "Scarlet Knights", 
+            "name": "Rutgers University", 
+            "abbr": "Rutgers"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 8, 
+            "color": "#000000", 
+            "mascot": "Aztecs", 
+            "name": "San Diego State University", 
+            "abbr": "San Diego State"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#C60C30", 
+            "mascot": "Mustangs", 
+            "name": "South Methodist University", 
+            "abbr": "SMU"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#C41E3A", 
+            "mascot": "Cardinal", 
+            "name": "Stanford University", 
+            "abbr": "Stanford"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#FF7F00", 
+            "mascot": "Orange", 
+            "name": "Syracuse University", 
+            "abbr": "Syracuse"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "color": "#9d1a33", 
+            "mascot": "Owls", 
+            "name": "Temple", 
+            "abbr": "Temple"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#500000", 
+            "mascot": "Aggies", 
+            "name": "Texas A&M", 
+            "abbr": "Texas A&M"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "color": "#660099", 
+            "mascot": "Horned Frogs", 
+            "name": "Texas Christian University", 
+            "abbr": "TCU"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#CC0000", 
+            "mascot": "Red Raiders", 
+            "name": "Texas Tech University", 
+            "abbr": "TX Tech"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 8, 
+            "color": "#C41E3A", 
+            "mascot": "Trojans", 
+            "name": "Troy University", 
+            "abbr": "Troy"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#000000", 
+            "mascot": "Golden Hurricane", 
+            "name": "Tulsa University", 
+            "abbr": "Tulsa"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "color": "#000000", 
+            "mascot": "Black Knights", 
+            "name": "U.S. Military Academy (Army)", 
+            "abbr": "Army"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#000000", 
+            "mascot": "Knights", 
+            "name": "University Central Florida", 
+            "abbr": "Central Florida"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#A32638", 
+            "mascot": "Crimson Tide", 
+            "name": "University of Alabama", 
+            "abbr": "Alabama"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#c41e3a", 
+            "mascot": "Wildcats", 
+            "name": "University of Arizona", 
+            "abbr": "Arizona"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#BE0F34", 
+            "mascot": "Razorbacks", 
+            "name": "University of Arkansas", 
+            "abbr": "Arkansas"
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#191970", 
+            "mascot": "Bears", 
+            "name": "University of California", 
+            "abbr": "Cal"
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#536895", 
+            "mascot": "Bruins", 
+            "name": "University of California, Los Angeles (UCLA)", 
+            "abbr": "UCLA"
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "color": "#e00122", 
+            "mascot": "Bearcats", 
+            "name": "University of Cincinnati", 
+            "abbr": "Cincy"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#000000", 
+            "mascot": "Buffalos", 
+            "name": "University of Colorado", 
+            "abbr": "Colorado"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "color": "darkblue", 
+            "mascot": "Huskies", 
+            "name": "University of Connecticut", 
+            "abbr": "UConn"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#FF4A00", 
+            "mascot": "Gators", 
+            "name": "University of Florida", 
+            "abbr": "Florida"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#ce1126", 
+            "mascot": "Bulldogs", 
+            "name": "University of Georgia", 
+            "abbr": "Georgia"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "color": "#000000", 
+            "mascot": "Warriors", 
+            "name": "University of Hawaii", 
+            "abbr": "Hawaii"
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#CC0000", 
+            "mascot": "Cougars", 
+            "name": "University of Houston", 
+            "abbr": "Houston"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#003C7D", 
+            "mascot": "Fighting Illini", 
+            "name": "University of Illinois", 
+            "abbr": "Illinois"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#000000", 
+            "mascot": "Hawkeyes", 
+            "name": "University of Iowa", 
+            "abbr": "Iowa"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#00407A", 
+            "mascot": "Wildcats", 
+            "name": "University of Kentucky", 
+            "abbr": "Kentucky"
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 10, 
+            "color": "#800000", 
+            "mascot": "Warhawks", 
+            "name": "University of Louisiana at Monroe", 
+            "abbr": "ULM"
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 10, 
+            "color": "#E34234", 
+            "mascot": "Ragin' Cajuns", 
+            "name": "University of Louisiana, Lafayette", 
+            "abbr": "Louisiana Lafayette"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#CE1126", 
+            "mascot": "Terrapins", 
+            "name": "University of Maryland", 
+            "abbr": "Maryland"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#f47321", 
+            "mascot": "Hurricanes", 
+            "name": "University of Miami", 
+            "abbr": "Miami"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "color": "#ce1126", 
+            "mascot": "Redhawks", 
+            "name": "University of Miami, Ohio", 
+            "abbr": "Miami OH"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#F6D565", 
+            "mascot": "Wolverines", 
+            "name": "University of Michigan", 
+            "abbr": "Michigan"
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#800000", 
+            "mascot": "Golden Gophers", 
+            "name": "University of Minnesota", 
+            "abbr": "UM"
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#002B7F", 
+            "mascot": "Rebels", 
+            "name": "University of Mississippi", 
+            "abbr": "Ole Miss"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#000000", 
+            "mascot": "Tigers", 
+            "name": "University of Missouri", 
+            "abbr": "Mizzou"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#FF2400", 
+            "mascot": "Cornhuskers", 
+            "name": "University of Nebraska", 
+            "abbr": "Nebraska"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "color": "#C10202", 
+            "mascot": "Rebels", 
+            "name": "University of Nevada, Las Vegas", 
+            "abbr": "UNLV"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "color": "#003366", 
+            "mascot": "Wolfpack", 
+            "name": "University of Nevada, Reno", 
+            "abbr": "Nevada"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#56A0D3", 
+            "mascot": "Tar Heels", 
+            "name": "University of North Carolina", 
+            "abbr": "N.Carolina"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 4, 
+            "color": "#C5B358", 
+            "mascot": "Fighting Irish", 
+            "name": "University of Notre Dame", 
+            "abbr": "Notre Dame"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "color": "#006A4D", 
+            "mascot": "Bobcats", 
+            "name": "University of Ohio", 
+            "abbr": "Ohio"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#841617", 
+            "mascot": "Sooners", 
+            "name": "University of Oklahoma", 
+            "abbr": "Oklahoma"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#004F27", 
+            "mascot": "Ducks", 
+            "name": "University of Oregon", 
+            "abbr": "Oregon"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "color": "#002b5e", 
+            "mascot": "Panthers", 
+            "name": "University of Pittsburgh", 
+            "abbr": "Pitt"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#73000A", 
+            "mascot": "Gamecocks", 
+            "name": "University of South Carolina", 
+            "abbr": "South Caro"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "color": "#006747", 
+            "mascot": "Bulls", 
+            "name": "University of South Florida", 
+            "abbr": "S Florida"
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#990000", 
+            "mascot": "Trojans", 
+            "name": "University of Southern California", 
+            "abbr": "USC"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#000000", 
+            "mascot": "Eagles", 
+            "name": "University of Southern Mississippi", 
+            "abbr": "So Miss"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#f77f00", 
+            "mascot": "Vols", 
+            "name": "University of Tennessee", 
+            "abbr": "Tennessee"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 13, 
+            "color": "#CC5500", 
+            "mascot": "Longhorns", 
+            "name": "University of Texas", 
+            "abbr": "Texas"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 5, 
+            "color": "#F4793E", 
+            "mascot": "Miners", 
+            "name": "University of Texas, El Paso", 
+            "abbr": "UTEP"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "color": "#191970", 
+            "mascot": "Rockets", 
+            "name": "University of Toledo", 
+            "abbr": "Toledo"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "color": "#CC0000", 
+            "mascot": "Utes", 
+            "name": "University of Utah", 
+            "abbr": "Utah"
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#ff7003", 
+            "mascot": "Cavaliers", 
+            "name": "University of Virginia", 
+            "abbr": "Virginia"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 2, 
+            "color": "#3b3e72", 
+            "mascot": "Huskies", 
+            "name": "University of Washington", 
+            "abbr": "Washington"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 12, 
+            "color": "#b70101", 
+            "mascot": "Badgers", 
+            "name": "University of Wisconsin", 
+            "abbr": "Wisconsin"
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 3, 
+            "color": "#492f24", 
+            "mascot": "Cowboys", 
+            "name": "University of Wyoming", 
+            "abbr": "Wyoming"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 6, 
+            "color": "#003366", 
+            "mascot": "Aggies", 
+            "name": "Utah State University", 
+            "abbr": "Utah St."
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 1, 
+            "color": "#000000", 
+            "mascot": "Commodores", 
+            "name": "Vanderbilt University", 
+            "abbr": "Vanderbilt"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#660000", 
+            "mascot": "Hokies", 
+            "name": "Virginia Polytechnic Institute and State University", 
+            "abbr": "Virginia Tech"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 11, 
+            "color": "#CFB53B", 
+            "mascot": "Demon Deacons", 
+            "name": "Wake Forest University", 
+            "abbr": "Wake Forest"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 9, 
+            "color": "#FFCC00", 
+            "mascot": "Mountaineers", 
+            "name": "West Virginia University", 
+            "abbr": "W Virginia"
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "core.school", 
+        "fields": {
+            "conference": 7, 
+            "color": "#663300", 
+            "mascot": "Broncos", 
+            "name": "Western Michigan University", 
+            "abbr": "Western Michigan"
+        }
+    }
+]
