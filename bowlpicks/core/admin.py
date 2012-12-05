@@ -47,6 +47,7 @@ class TeamAdmin(admin.ModelAdmin):
     list_filter = ('season', )
     raw_id_fields = ['school', ]
     search_fields = ['school', ]
+    list_editable = ('season',)
 
 
 admin.site.register(Season, SeasonAdmin)
