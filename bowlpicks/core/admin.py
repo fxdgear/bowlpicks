@@ -13,6 +13,8 @@ class GameAdmin(admin.ModelAdmin):
         'home_score',
         'away_team',
         'away_score',)
+    raw_id_fields = ['home_team', 'away_team']
+    search_fields = ['home_team', 'away_team']
 
 
 class PickAdmin(admin.ModelAdmin):
@@ -31,15 +33,20 @@ class ConferenceAdmin(admin.ModelAdmin):
 class TeamInline(admin.TabularInline):
     model = Team
 
+
+
 class SchoolAdmin(admin.ModelAdmin):
     list_display = ('name', 'abbr', 'mascot', 'conference', 'color')
     inlines = [TeamInline, ]
     list_editable = ('color',)
+    search_fields = ['name', ]
 
 
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('school', 'season', 'record', 'rank')
     list_filter = ('season', )
+    raw_id_fields = ['school', ]
+    search_fields = ['school', ]
 
 
 admin.site.register(Season, SeasonAdmin)

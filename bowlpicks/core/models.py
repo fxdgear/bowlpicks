@@ -7,6 +7,8 @@ import urllib2
 
 from bowlpicks.profiles.models import Player, PlayerRanking
 
+def get_current_season():
+    return Season.objects.current()
 
 class SeasonManager(models.Manager):
     def current(self):
@@ -63,7 +65,7 @@ class School(models.Model):
 class Team(models.Model):
 
     school = models.ForeignKey(School)
-    season = models.ForeignKey(Season)
+    season = models.ForeignKey(Season, default=get_current_season())
     record = models.CharField(max_length=20)
     rank = models.IntegerField(blank=True, null=True)
 
@@ -97,8 +99,7 @@ class GameManger(models.Manager):
             date__lt=tomorrow + datetime.timedelta(days=1),
             date__gte=tomorrow).order_by('date')
 
-def get_current_season():
-    return Season.objects.current()
+
 
 class Game(models.Model):
     date = models.DateTimeField()
