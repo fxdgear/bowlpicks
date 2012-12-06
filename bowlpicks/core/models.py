@@ -66,7 +66,7 @@ class Team(models.Model):
 
     school = models.ForeignKey(School)
     season = models.ForeignKey(Season, default=get_current_season(), blank=True, null=True)
-    record = models.CharField(max_length=20)
+    record = models.CharField(max_length=20, blank=True, null=True)
     rank = models.IntegerField(blank=True, null=True)
 
     def __unicode__(self):
