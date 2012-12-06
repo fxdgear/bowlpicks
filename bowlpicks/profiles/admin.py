@@ -3,7 +3,14 @@ from bowlpicks.profiles.models import Profile, Player
 
 
 class PlayerAdmin(admin.ModelAdmin):
-    list_display = ['name', 'profile', 'paid', ]
+    list_display = ['name', 'profile', 'season', 'paid', 'active']
+    list_edit = ['paid', 'active']
 
-admin.site.register(Profile)
+class PlayerInline(admin.TabularInline):
+    model = Player
+
+class ProfileAdmin(admin.ModelAdmin):
+    inlines = [PlayerInline, ]
+
+admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Player, PlayerAdmin)
