@@ -4,7 +4,7 @@ from bowlpicks.profiles.models import Profile, Player
 
 class PlayerAdmin(admin.ModelAdmin):
     list_display = ['name', 'profile', 'paid', 'active']
-    list_edit = ['paid', 'active']
+    list_editable = ['paid', 'active']
 
 class PlayerInline(admin.TabularInline):
     model = Player
