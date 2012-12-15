@@ -76,6 +76,7 @@ class PlayerRankingManager(models.Manager):
         model = models.get_model('core', 'Season')
         return self.filter(season=model.objects.current())
 
+
 class PlayerRanking(models.Model):
     season = models.ForeignKey('core.Season')
     player = models.ForeignKey(Player)
@@ -86,3 +87,6 @@ class PlayerRanking(models.Model):
 
     class Meta:
         ordering = ('-correct', )
+
+    def __unicode__(self):
+        return "%s (%s)" % (self.player, self.season)

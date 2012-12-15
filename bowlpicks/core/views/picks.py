@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext  #, loader, Context
 from django.http import HttpResponse, HttpResponseForbidden
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import cache_page
 
 
 from django.views.generic.edit import ProcessFormView
@@ -22,10 +23,7 @@ def create_pick(request, *args, **kwargs):
     try:
         player = profile.player_set.get(pk=player_id)
     except:
-        if not request.user.is_staff:
-            return HttpResponseForbidden()
-        else:
-            player = Player.objects.get(pk=player_id)
+        return HttpResponseForbidden()
 
     if request.is_ajax and request.method == "GET":
         game = Game.objects.get(pk=game_id)
@@ -40,14 +38,19 @@ def create_pick(request, *args, **kwargs):
         return HttpResponse(status=200)
 
 
+@cache_page(60 * 15)
 def pick_list(request, *args, **kwargs):
     template_name = kwargs.pop('template', "pick/pick_list_new.html")
-    season = Season.objects.current()
-    rankings = PlayerRanking.objects.filter(season=season)
+    season = Season.objects.filter(current=True)[0]
+    rankings = PlayerRanking.objects.filter(
+        season=season,
+        player__active=True,
+        player__season=season)
 
     return render_to_response(template_name, {
         'rankings': rankings,
         'season': season,
+        #'players': players
     }, context_instance=RequestContext(request))
 
 
