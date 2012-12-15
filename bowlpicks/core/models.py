@@ -127,24 +127,28 @@ class Game(models.Model):
         return u"%s vs %s" % (self.home_team.school.abbr, self.away_team.school.abbr)
 
     def home_picks(self):
-        return self.pick_set.filter(winner=self.home_team)
+        return self.pick_set.filter(
+            winner=self.home_team,
+            player__active=True)
 
     def away_picks(self):
-        return self.pick_set.filter(winner=self.away_team)
+        return self.pick_set.filter(
+            winner=self.away_team,
+            player__active=True)
 
     def away_percent(self):
         try:
-            value = (float(self.away_picks().count()) / float(self.pick_set.count())) * 100
+            value = (float(self.away_picks().count()) / float(self.pick_set.filter(player__active=True).count())) * 100
         except ZeroDivisionError:
             value = 0
-        return int(value)
+        return round(value)
 
     def home_percent(self):
         try:
-            value = (float(self.home_picks().count()) / float(self.pick_set.count())) * 100
+            value = (float(self.home_picks().count()) / float(self.pick_set.filter(player__active=True).count())) * 100
         except ZeroDivisionError:
             value = 0
-        return int(value)
+        return round(value)
 
     @property
     def winner_home(self):
