@@ -23,3 +23,6 @@ What I would do is create a new virtualenv::
 Now you shold be at a point where you can now run ``git init`` or what ever, and create a new repo from this skeleton
 Oh you should go through the .gitignore file and change ``project_name`` to what ever you project name is
 enjoy
+
+
+payout calculator: https://gist.github.com/08f3b6fcf36f06a619ac
